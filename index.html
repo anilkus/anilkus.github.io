@@ -207,194 +207,218 @@
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="inner">
-      <div class="brand">
-        <span class="dot"></span>
-        <span>Akademik Profil</span>
-      </div>
 
-      <nav>
-        <a class="navlink" href="#about">Hakkımda</a>
-        <a class="navlink" href="#research">İlgi Alanları</a>
-        <a class="navlink" href="#publications">Yayınlar</a>
-        <a class="navlink" href="#projects">Projeler</a>
-        <a class="navlink" href="#contact">İletişim</a>
-
-        <a class="btn" href="https://github.com/anilkus" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="https://scholar.google.com/citations?user=YUCnGLkAAAAJ&hl=tr" target="_blank" rel="noopener">Google Scholar</a>
-        <a class="btn primary" href="/files/CV_AnilKus.pdf" target="_blank" rel="noopener">CV (PDF)</a>
-        <div style="display:flex; gap:6px; margin-left:6px;">
-  <button class="btn" onclick="setLang('tr')">TR</button>
-  <button class="btn" onclick="setLang('en')">EN</button>
-</div>
-
-      </nav>
+<header class="topbar">
+  <div class="inner">
+    <div class="brand">
+      <span class="dot"></span>
+      <span>Academic Profile</span>
     </div>
-  </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <!-- Left: Main -->
-      <div class="card pad" id="about">
-        <h1 class="headline">Anıl Kuş</h1>
-        <p class="sub"><strong>Öğretim Görevlisi • Araştırmacı</strong> — Yozgat Bozok Üniversitesi, Boğazlıyan MYO (Bilgisayar Teknolojileri)</p>
+    <nav>
+      <a class="navlink" href="#about">About</a>
+      <a class="navlink" href="#research">Research</a>
+      <a class="navlink" href="#publications">Publications</a>
+      <a class="navlink" href="#projects">Projects</a>
+      <a class="navlink" href="#contact">Contact</a>
 
-        <div class="chips">
-          <span class="chip">AI / ML</span>
-          <span class="chip">NLP</span>
-          <span class="chip">Explainable AI</span>
-          <span class="chip">Applied Deep Learning</span>
-          <span class="chip">Academic Writing</span>
+      <a class="btn" href="https://github.com/anilkus" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://scholar.google.com" target="_blank" rel="noopener">Scholar</a>
+      <a class="btn primary" href="/files/CV_AnilKus.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+
+      <div style="display:flex; gap:6px; margin-left:6px;">
+        <button class="btn" onclick="setLang('tr')">TR</button>
+        <button class="btn" onclick="setLang('en')">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- HERO / ABOUT -->
+  <section class="hero" id="about">
+    <div class="card pad">
+
+      <h1 class="headline">Anıl Kuş</h1>
+
+      <!-- TITLE -->
+      <p class="sub" data-lang="tr">
+        <strong>Öğretim Görevlisi • Araştırmacı</strong> —
+        Yozgat Bozok Üniversitesi, Boğazlıyan MYO (Bilgisayar Teknolojileri)
+      </p>
+
+      <p class="sub" data-lang="en" style="display:none">
+        <strong>Lecturer • Researcher</strong> —
+        Yozgat Bozok University, Boğazlıyan Vocational School (Computer Technologies)
+      </p>
+
+      <div class="chips">
+        <span class="chip">AI / ML</span>
+        <span class="chip">NLP</span>
+        <span class="chip">Explainable AI</span>
+        <span class="chip">Deep Learning</span>
+      </div>
+
+      <!-- ABOUT TEXT -->
+      <p data-lang="tr" style="color:var(--muted)">
+        Yapay zekâ, makine öğrenmesi ve özellikle <strong>Doğal Dil İşleme (NLP)</strong>
+        alanlarında çalışıyorum. Akademik araştırmayı gerçek dünyada uygulanabilir,
+        ölçeklenebilir ve güvenilir sistemlere dönüştürmeyi hedefliyorum.
+      </p>
+
+      <p data-lang="en" style="display:none; color:var(--muted)">
+        I work on <strong>Artificial Intelligence</strong>, <strong>Machine Learning</strong>,
+        and particularly <strong>Natural Language Processing (NLP)</strong>. My goal is to
+        transform academic research into scalable, reliable, and real-world AI systems.
+      </p>
+
+      <div class="cta">
+        <a class="btn primary" href="https://avesis.bozok.edu.tr/anil.kus" target="_blank" rel="noopener">
+          Institutional Profile (AVESIS)
+        </a>
+        <a class="btn" href="/files/CV_AnilKus.pdf" target="_blank" rel="noopener">Download CV</a>
+      </div>
+    </div>
+
+    <!-- PROFILE CARD -->
+    <aside class="card pad profile">
+      <div class="photo">
+        <img class="avatar" src="/images/profile_anil.jpeg" alt="Anıl Kuş" loading="lazy">
+        <div class="pmeta">
+          <h2>Anıl Kuş</h2>
+          <p data-lang="tr">İletişim & Bağlantılar</p>
+          <p data-lang="en" style="display:none">Contact & Links</p>
         </div>
+      </div>
 
-        <p style="margin:0; color:var(--muted)">
-          Yapay zekâ, makine öğrenmesi ve özellikle <strong>NLP</strong> odaklı çalışıyorum. Amaç: akademik araştırmayı gerçek dünyada
-          ölçeklenebilir sistemlere dönüştürmek; veriye dayalı karar ve güvenilir/yorumlanabilir modeller üretmek.
+      <div class="info">
+        <div class="row">
+          <span>Email</span>
+          <strong>
+            <a href="mailto:anil.kus@bozok.edu.tr">anil.kus@bozok.edu.tr</a>
+          </strong>
+        </div>
+        <div class="row">
+          <span>AVESIS</span>
+          <strong>
+            <a href="https://avesis.bozok.edu.tr/anil.kus" target="_blank" rel="noopener">Profile</a>
+          </strong>
+        </div>
+        <div class="row">
+          <span>GitHub</span>
+          <strong>
+            <a href="https://github.com/anilkus" target="_blank" rel="noopener">anilkus</a>
+          </strong>
+        </div>
+        <div class="row">
+          <span>Scholar</span>
+          <strong>
+            <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
+          </strong>
+        </div>
+      </div>
+
+      <div class="item">
+        <p class="t" data-lang="tr">Kısa Not</p>
+        <p class="t" data-lang="en" style="display:none">Quick Note</p>
+
+        <p class="d" data-lang="tr">
+          Scholar linkini kendi profil URL’inle değiştir. CV dosyan <code>/files/CV_AnilKus.pdf</code>.
         </p>
-
-        <div class="cta">
-          <a class="btn primary" href="https://avesis.bozok.edu.tr/anil.kus" target="_blank" rel="noopener">Kurumsal Profil (AVESIS)</a>
-          <a class="btn" href="/files/CV_AnilKus.pdf" target="_blank" rel="noopener">CV’yi Aç</a>
-          <a class="btn" href="#publications">Seçilmiş Yayınlar</a>
-        </div>
+        <p class="d" data-lang="en" style="display:none">
+          Replace the Scholar link with your profile URL. Your CV file is <code>/files/CV_AnilKus.pdf</code>.
+        </p>
       </div>
+    </aside>
+  </section>
 
-      <!-- Right: Profile -->
-      <aside class="card pad profile" aria-label="Profile card">
-        <div class="photo">
-          <img class="avatar" src="/images/profile_anil.jpeg" alt="Anıl Kuş profil fotoğrafı" />
-          <div class="pmeta">
-            <h2 style="margin:0">İletişim</h2>
-            <p>Resmî bağlantılar ve hızlı erişim</p>
-          </div>
-        </div>
+  <!-- RESEARCH -->
+  <section class="card pad" id="research">
+    <h3 data-lang="tr">Araştırma İlgi Alanları</h3>
+    <h3 data-lang="en" style="display:none">Research Interests</h3>
 
-        <div class="info">
-          <div class="row">
-            <span>E-posta</span>
-            <strong><a href="mailto:anil.kus@bozok.edu.tr">anil.kus@bozok.edu.tr</a></strong>
-          </div>
-          <div class="row">
-            <span>AVESIS</span>
-            <strong><a href="https://avesis.bozok.edu.tr/anil.kus" target="_blank" rel="noopener">Profil</a></strong>
-          </div>
-          <div class="row">
-            <span>GitHub</span>
-            <strong><a href="https://github.com/anilkus" target="_blank" rel="noopener">anilkus</a></strong>
-          </div>
-          <div class="row">
-            <span>Scholar</span>
-            <strong><a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a></strong>
-          </div>
-        </div>
+    <ul class="list">
+      <li>Natural Language Processing (NLP)</li>
+      <li>Machine Learning & Deep Learning</li>
+      <li>Explainable Artificial Intelligence</li>
+      <li>Text Summarization & Sentiment Analysis</li>
+    </ul>
+  </section>
 
-        <div class="item">
-          <p class="t">Kısa Not</p>
-          <p class="d">Scholar linkini kendi profil URL’inle değiştir. CV dosyanı <code>/files/cv.pdf</code> yoluna koy.</p>
-        </div>
-      </aside>
-    </section>
+  <!-- PUBLICATIONS -->
+  <section class="card pad" id="publications">
+    <h3 data-lang="tr">Seçilmiş Yayınlar</h3>
+    <h3 data-lang="en" style="display:none">Selected Publications</h3>
 
-    <section class="grid">
-      <div class="card pad col-6" id="research">
-        <div class="section-title">
-          <h3>İlgi Alanları</h3>
-          <small>Odak noktaları</small>
-        </div>
-        <ul class="list">
-          <li><strong>Natural Language Processing (NLP)</strong> — özetleme, duygu analizi, bilgi çıkarımı</li>
-          <li><strong>Machine Learning & Deep Learning</strong> — sınıflandırma, sağlamlık (robustness), optimizasyon</li>
-          <li><strong>Explainable AI</strong> — yorumlanabilirlik, model güvenilirliği</li>
-          <li><strong>Uygulamalı Yapay Zekâ</strong> — kurum/iş süreçlerine entegre sistemler</li>
-        </ul>
-      </div>
+    <div class="item">
+      <p class="t">
+        Performance Evaluation of Extractive Methods in Automatic Text Summarization
+      </p>
+      <p class="d">Journal Article • 2023</p>
+    </div>
 
-      <div class="card pad col-6">
-        <div class="section-title">
-          <h3>Yetenekler</h3>
-          <small>Teknik set</small>
-        </div>
-        <ul class="list">
-          <li><strong>Python</strong>, PyTorch, TensorFlow</li>
-          <li><strong>Transformers</strong>, spaCy, NLTK</li>
-          <li>Veri işleme, değerlendirme metrikleri, deney tasarımı</li>
-          <li>Akademik yazım, proje yürütme, ders verme</li>
-        </ul>
-      </div>
+    <div class="item">
+      <p class="t">
+        An Extractive Text Summarization Model for Turkish Medical Papers
+      </p>
+      <p class="d">Journal Article • 2023</p>
+    </div>
 
-      <div class="card pad col-12" id="publications">
-        <div class="section-title">
-          <h3>Seçilmiş Yayınlar</h3>
-          <small>İstersen burayı AVESIS’ten otomatikleştiririz</small>
-        </div>
+    <a class="btn" href="https://avesis.bozok.edu.tr/anil.kus" target="_blank" rel="noopener" data-lang="tr">
+      Tüm yayınlar (AVESIS)
+    </a>
+    <a class="btn" href="https://avesis.bozok.edu.tr/anil.kus" target="_blank" rel="noopener" data-lang="en" style="display:none">
+      View all publications (AVESIS)
+    </a>
+  </section>
 
-        <div class="item">
-          <p class="t">Performance Evaluation of Extractive Methods in Automatic Text Summarization Using Medical Papers (2023)</p>
-          <p class="d">Dergi makalesi • Otomatik özetleme • Medikal metinler</p>
-        </div>
+  <!-- PROJECTS -->
+  <section class="card pad" id="projects">
+    <h3 data-lang="tr">Projeler & Patentler</h3>
+    <h3 data-lang="en" style="display:none">Projects & Patents</h3>
 
-        <div class="item">
-          <p class="t">An Extractive Text Summarization Model for Generating Extended Abstracts of Medical Papers in Turkish (2023)</p>
-          <p class="d">Dergi makalesi • Türkçe özetleme • Extended abstract üretimi</p>
-        </div>
+    <ul class="list" data-lang="tr">
+      <li>TÜBİTAK Projesi – Özel gereksinimli çocuklar için sosyal entegrasyon (2026)</li>
+      <li>Faydalı Model – Akıllı kontrol sistemi (2025)</li>
+    </ul>
 
-        <div class="cta" style="margin-top:10px">
-          <a class="btn primary" href="https://avesis.bozok.edu.tr/anil.kus" target="_blank" rel="noopener">Tüm yayınlar (AVESIS)</a>
-          <a class="btn" href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
-        </div>
-      </div>
+    <ul class="list" data-lang="en" style="display:none">
+      <li>TÜBİTAK Project – Social integration for children with special needs (2026)</li>
+      <li>Utility Model – Smart control system (2025)</li>
+    </ul>
+  </section>
 
-      <div class="card pad col-12" id="projects">
-        <div class="section-title">
-          <h3>Projeler / Patentler</h3>
-          <small>Örnek alanlar</small>
-        </div>
-        <div class="item">
-          <p class="t">TÜBİTAK Projesi (2026) — Sosyal entegrasyon / özel gereksinimli çocuklar</p>
-          <p class="d">Rol / çıktı / etkiler (istersen detaylandırırım)</p>
-        </div>
-        <div class="item">
-          <p class="t">Utility Model — Geliştirilmiş kontrol ve değerlendirme sistemi (2025)</p>
-          <p class="d">Kısa açıklama • Bağlantı (varsa)</p>
-        </div>
-      </div>
+  <!-- CONTACT -->
+  <section class="card pad" id="contact">
+    <h3 data-lang="tr">İletişim</h3>
+    <h3 data-lang="en" style="display:none">Contact</h3>
 
-      <div class="card pad col-12" id="contact">
-        <div class="section-title">
-          <h3>İletişim</h3>
-          <small>Hızlı erişim</small>
-        </div>
-        <div class="cta">
-          <a class="btn primary" href="mailto:anil.kus@bozok.edu.tr">E-posta Gönder</a>
-          <a class="btn" href="https://avesis.bozok.edu.tr/anil.kus" target="_blank" rel="noopener">AVESIS</a>
-          <a class="btn" href="https://github.com/anilkus" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="/files/cv.pdf" target="_blank" rel="noopener">CV (PDF)</a>
-        </div>
-      </div>
-    </section>
+    <div class="cta">
+      <a class="btn primary" href="mailto:anil.kus@bozok.edu.tr">Email</a>
+      <a class="btn" href="https://github.com/anilkus" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="/files/CV_AnilKus.pdf" target="_blank" rel="noopener">CV</a>
+    </div>
+  </section>
 
-    <footer class="foot">
-      <div>© <span id="y"></span> Anıl Kuş</div>
-      <div>GitHub Pages üzerinde yayınlanır • <a href="https://github.com/anilkus" target="_blank" rel="noopener">Kaynak</a></div>
-    </footer>
-  </main>
+</main>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
-  <script>
+<footer class="foot">
+  <div>© <span id="year"></span> Anıl Kuş</div>
+</footer>
+
+<script>
   function setLang(lang) {
     document.querySelectorAll('[data-lang]').forEach(el => {
       el.style.display = (el.getAttribute('data-lang') === lang) ? '' : 'none';
     });
     localStorage.setItem('siteLang', lang);
   }
-
-  // Sayfa açıldığında son seçilen dili hatırla
   const savedLang = localStorage.getItem('siteLang') || 'tr';
   setLang(savedLang);
+  document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
 </body>
+
 </html>
