@@ -383,5 +383,18 @@
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
+  <script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.style.display = (el.getAttribute('data-lang') === lang) ? '' : 'none';
+    });
+    localStorage.setItem('siteLang', lang);
+  }
+
+  // Sayfa açıldığında son seçilen dili hatırla
+  const savedLang = localStorage.getItem('siteLang') || 'tr';
+  setLang(savedLang);
+</script>
+
 </body>
 </html>
