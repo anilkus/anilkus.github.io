@@ -118,6 +118,22 @@ section[id]{scroll-margin-top:80px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;transition:transform .25s,box-shadow .25s,border-color .25s}
 .card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(14,26,43,.08);border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
 
+/* visiting */
+.visits{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.visit{position:relative;overflow:hidden;padding:28px}
+.visit::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+.v-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.when{font-size:.85rem;color:var(--muted);font-weight:500}
+.live{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;color:var(--accent)}
+.live i{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 1.8s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 60%,transparent)}100%{box-shadow:0 0 0 10px transparent}}
+.visit h3{font-size:1.35rem;margin-bottom:4px}
+.unit{color:var(--muted);font-size:.95rem}
+.group{display:inline-block;margin:14px 0 12px;font-family:Sora,sans-serif;font-weight:600;font-size:.9rem;color:var(--accent-2);background:color-mix(in srgb,var(--accent-2) 12%,transparent);padding:5px 12px;border-radius:999px}
+.focus{font-size:.95rem}
+.place{color:var(--muted);font-size:.85rem;margin-top:10px}
+@media (max-width:720px){.visits{grid-template-columns:1fr}}
+
 /* publications */
 .pubs{display:grid;gap:12px}
 .pub{display:flex;gap:18px;align-items:flex-start}
@@ -165,7 +181,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:36px 0}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .blob,.track,.typed .caret{animation:none}
+  .blob,.track,.typed .caret,.live i{animation:none}
   .js .reveal{opacity:1;transform:none;transition:none}
   .card,.btn,.ic{transition:none}
 }
@@ -179,6 +195,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:36px 0}
     <a class="logo" href="#top">Anıl Kuş</a>
     <ul>
       <li><a href="#about">About</a></li>
+      <li><a href="#visiting">Visiting</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#highlights">Highlights</a></li>
@@ -196,8 +213,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:36px 0}
       <p class="typed"><span id="typed">NLP Researcher</span><span class="caret"></span></p>
       <p class="sub">Lecturer at Yozgat Bozok University and PhD candidate at Mersin University.</p>
       <div class="actions">
-        <a class="btn primary" href="/files/CV_AnilKus.pdf" target="_blank" rel="noopener">Download CV</a>
-        <a class="btn ghost" href="https://scholar.google.com/citations?user=YUCnGLkAAAAJ&hl=tr" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="btn primary" href="https://scholar.google.com/citations?user=YUCnGLkAAAAJ&hl=tr" target="_blank" rel="noopener">Google Scholar</a>
         <div class="icon-row">
           <a class="ic" href="https://www.linkedin.com/in/anil-kus/" target="_blank" rel="noopener" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.23 0z"/></svg>
@@ -235,6 +251,28 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:36px 0}
     <p class="lead">I work on making language models measurable, explainable and trustworthy, with a focus on Turkish and clinical text. I head the Computer Technologies Department at Boğazlıyan Vocational School and co-founded SmartLab Technology Center and Zorbalama.</p>
   </section>
 
+  <section class="block reveal" id="visiting">
+    <h2>Visiting Research</h2>
+    <div class="visits">
+      <div class="card visit">
+        <div class="v-top"><span class="when">Jul to Sep 2026</span></div>
+        <h3>Karlsruhe Institute of Technology</h3>
+        <p class="unit">Institute for Automation and Applied Informatics (IAI)</p>
+        <span class="group">Secure Energy Systems (SES)</span>
+        <p class="focus">Adversarial machine learning and explainable AI for energy systems.</p>
+        <p class="place">Karlsruhe, Germany</p>
+      </div>
+      <div class="card visit">
+        <div class="v-top"><span class="when">Sep to Oct 2026</span><span class="live"><i></i>Current</span></div>
+        <h3>University of Turku</h3>
+        <p class="unit">Department of Computing</p>
+        <span class="group">TurkuNLP</span>
+        <p class="focus">Evaluation of language models and large-scale Turkish web data.</p>
+        <p class="place">Turku, Finland</p>
+      </div>
+    </div>
+  </section>
+
   <section class="block reveal" id="publications">
     <h2>Publications</h2>
     <div class="pubs">
@@ -264,7 +302,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:36px 0}
         <h3 class="t">Experience</h3>
         <ul class="timeline">
           <li><small>2025 to present</small><b>Lecturer, Head of Department</b><span>Yozgat Bozok University</span></li>
-          <li><small>2026</small><b>Visiting Researcher</b><span>KIT, Germany and University of Turku, Finland</span></li>
+          <li><small>2026</small><b>Visiting Researcher</b><span>KIT IAI (SES group) and TurkuNLP, University of Turku</span></li>
           <li><small>2019 to 2025</small><b>Head of Department, Assistant Director</b><span>Toros University</span></li>
         </ul>
       </div>
