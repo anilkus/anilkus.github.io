@@ -1,342 +1,468 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anıl Kuş — Academic Profile</title>
-<meta name="description" content="Anıl Kuş — researcher and lecturer working on AI, NLP, and Explainable AI.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anıl Kuş | Academic Profile</title>
+<meta name="description" content="Anıl Kuş, lecturer and PhD researcher working on evaluation of language models, explainable AI and trustworthy clinical NLP.">
+<meta property="og:title" content="Anıl Kuş | Academic Profile">
+<meta property="og:description" content="Evaluation of language models, explainable AI and trustworthy clinical NLP.">
+<meta property="og:image" content="https://anilkus.github.io/images/profile_anil.jpeg">
+<meta property="og:type" content="profile">
 <link href="/images/profile_anil.jpeg" rel="icon">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Baloo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Anıl Kuş",
+  "jobTitle":"Lecturer and PhD Researcher",
+  "affiliation":{"@type":"CollegeOrUniversity","name":"Yozgat Bozok University"},
+  "alumniOf":[{"@type":"CollegeOrUniversity","name":"Mersin University"},{"@type":"CollegeOrUniversity","name":"Bahçeşehir University"}],
+  "url":"https://anilkus.github.io/",
+  "image":"https://anilkus.github.io/images/profile_anil.jpeg",
+  "email":"mailto:anil.kus@bozok.edu.tr",
+  "identifier":"https://orcid.org/0000-0002-5964-3727",
+  "sameAs":[
+    "https://orcid.org/0000-0002-5964-3727",
+    "https://scholar.google.com/citations?user=YUCnGLkAAAAJ&hl=tr",
+    "https://www.scopus.com/authid/detail.uri?authorId=59491177800",
+    "https://www.webofscience.com/wos/author/record/RCY-9020-2026",
+    "https://www.researchgate.net/profile/Anil-Kus",
+    "https://github.com/anilkus",
+    "https://www.linkedin.com/in/anil-kus/",
+    "https://avesis.bozok.edu.tr/anil.kus"
+  ],
+  "knowsAbout":["Natural Language Processing","Explainable AI","Evaluation of Language Models","Text Summarization","Clinical NLP","Adversarial Machine Learning"]
+}
+</script>
 <style>
-  :root{
-    --bg:#ffffff;
-    --ink:#171b1f;
-    --ink-soft:#565f6b;
-    --ink-faint:#8b93a0;
-    --line:#e2e2dc;
-    --line-strong:#c8c8c0;
-    --green:#2f4a3c;
-    --green-soft:#e9efe9;
-    --amber:#9c7a2e;
-    --paper:#fbfaf7;
-    --max:1180px;
+:root{
+  --bg:#E9ECF1;
+  --surface:#FFFFFF;
+  --ink:#18222E;
+  --muted:#5A6676;
+  --line:#D3D9E2;
+  --sal:58,75,216;
+  --sal-solid:#3A4BD8;
+  --now:#DDE1FB;
+  --gold:#F3DFA6;
+  --gold-ink:#5B4510;
+  --deep:#18222E;
+  --deep-ink:#EEF1F6;
+  --deep-muted:#A9B4C4;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F151D; --surface:#17202B; --ink:#E7ECF3; --muted:#9AA6B6; --line:#26313F;
+    --sal:122,138,255; --sal-solid:#8E9BFF; --now:#1E2550; --gold:#3A3118; --gold-ink:#F0D58A;
+    --deep:#E7ECF3; --deep-ink:#0F151D; --deep-muted:#4A5666;
   }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:'Baloo 2', system-ui, sans-serif;
-    font-size:16px;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3,.serif{
-    font-family:'Bangers', cursive;
-    font-weight:400;
-    letter-spacing:0.03em;
-  }
-  a{color:inherit;text-decoration:none;}
-  .mono{font-family:'Baloo 2', sans-serif; font-weight:600;}
-  ::selection{background:var(--green-soft);}
+}
+:root[data-theme="dark"]{
+  --bg:#0F151D; --surface:#17202B; --ink:#E7ECF3; --muted:#9AA6B6; --line:#26313F;
+  --sal:122,138,255; --sal-solid:#8E9BFF; --now:#1E2550; --gold:#3A3118; --gold-ink:#F0D58A;
+  --deep:#E7ECF3; --deep-ink:#0F151D; --deep-muted:#4A5666;
+}
 
-  .shell{display:grid;grid-template-columns:300px 1fr;max-width:var(--max);margin:0 auto;}
-  @media (max-width:900px){.shell{grid-template-columns:1fr;}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--ink);
+  font:400 16px/1.55 "Public Sans",system-ui,sans-serif;
+  padding:0 16px 48px;
+}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible{outline:2px solid var(--sal-solid);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:600;letter-spacing:-.01em;line-height:1.15}
+h2{font-size:1.15rem;margin-bottom:14px}
+.muted{color:var(--muted)}
+.wrap{max-width:1180px;margin:0 auto}
+[id]{scroll-margin-top:84px}
 
-  .sidebar{
-    position:sticky;top:0;align-self:start;height:100vh;
-    padding:48px 32px 32px 40px;
-    border-right:1px solid var(--line);
-    display:flex;flex-direction:column;
-  }
-  @media (max-width:900px){.sidebar{position:relative;height:auto;border-right:none;border-bottom:1px solid var(--line);padding:32px 24px;}}
-  .avatar{width:76px;height:76px;border-radius:50%;object-fit:cover;border:1px solid var(--line-strong);margin-bottom:20px;}
-  .sb-name{font-size:1.5rem;margin:0 0 4px;}
-  .sb-role{color:var(--ink-soft);font-size:0.92rem;line-height:1.5;margin:0 0 24px;}
-  .sb-nav{display:flex;flex-direction:column;gap:2px;margin-bottom:auto;font-size:0.92rem;}
-  .sb-nav a{padding:7px 0;color:var(--ink-soft);border-left:2px solid transparent;padding-left:12px;margin-left:-12px;transition:color .15s, border-color .15s;}
-  .sb-nav a:hover,.sb-nav a.active{color:var(--ink);border-left-color:var(--green);}
-  .sb-foot{padding-top:24px;margin-top:24px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:8px;font-size:0.86rem;}
-  .sb-foot a{color:var(--ink-soft);}
-  .sb-foot a:hover{color:var(--green);}
+/* top bar */
+.top{position:sticky;top:0;z-index:10;background:var(--bg);display:flex;justify-content:space-between;align-items:center;gap:12px 20px;padding:18px 0 14px;flex-wrap:wrap}
+.top .mark{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:1.05rem;text-decoration:none}
+.top nav{display:flex;gap:4px 18px;flex-wrap:wrap;font-size:.92rem}
+.top nav a{text-decoration:none;color:var(--muted);padding:2px 0;border-bottom:2px solid transparent}
+.top nav a:hover,.top nav a.active{color:var(--ink);border-bottom-color:var(--sal-solid)}
 
-  main{padding:56px 48px 80px;}
-  @media (max-width:900px){main{padding:40px 24px 60px;}}
-  section{margin-bottom:76px;scroll-margin-top:24px;}
-  .eyebrow{font-family:'Baloo 2',sans-serif;font-weight:600;font-size:0.74rem;color:var(--amber);letter-spacing:.02em;margin:0 0 10px;}
-  .sec-title{font-size:2.1rem;margin:0 0 28px;max-width:26ch;}
-  .lede{font-size:1.18rem;line-height:1.65;max-width:56ch;color:var(--ink);}
-  .lede + .lede{margin-top:16px;}
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;min-width:0}
+.s4{grid-column:span 4}.s5{grid-column:span 5}.s6{grid-column:span 6}
+.s7{grid-column:span 7}.s8{grid-column:span 8}.s12{grid-column:span 12}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:14px}
+.head h2{margin:0}
+.head span{font-size:.85rem;color:var(--muted)}
 
-  .hero{padding-top:8px;}
-  .hero h1{font-size:3.2rem;line-height:1.15;margin:0 0 18px;max-width:16ch;}
-  .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;}
-  .tag{font-family:'Baloo 2',sans-serif;font-weight:600;font-size:0.74rem;color:var(--green);background:var(--green-soft);border:1px solid #d7e2d9;padding:4px 10px;border-radius:100px;}
+/* hero */
+.hero{border-radius:28px;padding:36px;display:flex;flex-direction:column;justify-content:space-between;gap:36px;grid-row:span 2}
+.hero .who{display:flex;gap:18px;align-items:center}
+.hero img{width:80px;height:80px;border-radius:50%;object-fit:cover;border:1px solid var(--line);flex:none}
+.hero h1{font-size:1.6rem}
+.hero .role{color:var(--muted);font-size:.95rem}
+.tagline{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:clamp(2.1rem,5.2vw,4rem);line-height:1.08;letter-spacing:-.025em;max-width:16ch}
+.tok{border-radius:8px;padding:0 .08em;box-decoration-break:clone;-webkit-box-decoration-break:clone;
+  background:rgba(var(--sal),calc(var(--w) * .42));transition:background .9s ease}
+.hero:not(.lit) .tok{background:transparent}
+.legend{display:flex;align-items:center;gap:10px;font-size:.82rem;color:var(--muted);flex-wrap:wrap}
+.legend .scale{width:110px;height:8px;border-radius:4px;background:linear-gradient(90deg,rgba(var(--sal),0),rgba(var(--sal),.42))}
 
-  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:8px 40px;}
-  @media (max-width:640px){.grid-2{grid-template-columns:1fr;}}
-  .interest{padding:16px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;}
-  .interest .num{font-family:'Baloo 2',sans-serif;font-weight:600;color:var(--ink-faint);font-size:0.82rem;padding-top:2px;}
+/* now */
+.now{background:var(--now);border-color:transparent}
+.now .big{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.45rem;font-weight:600;line-height:1.2;margin:6px 0}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--sal-solid);margin-right:8px;vertical-align:middle}
 
-  .tl-item{display:grid;grid-template-columns:130px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--line);}
-  @media (max-width:640px){.tl-item{grid-template-columns:1fr;gap:6px;}}
-  .tl-item:last-child{border-bottom:1px solid var(--line);}
-  .tl-date{font-family:'Baloo 2',sans-serif;font-weight:600;font-size:0.8rem;color:var(--ink-faint);padding-top:3px;}
-  .tl-title{font-size:1.05rem;margin:0 0 6px;font-weight:600;font-family:'Baloo 2';}
-  .tl-venue{color:var(--green);font-size:0.9rem;margin:0 0 6px;}
-  .tl-desc{color:var(--ink-soft);font-size:0.92rem;max-width:58ch;}
-  .badge{display:inline-block;font-family:'Baloo 2',sans-serif;font-weight:600;font-size:0.68rem;color:var(--amber);border:1px solid #e3d6b8;background:#fbf6ea;padding:2px 8px;border-radius:100px;margin-bottom:8px;}
+/* links */
+.links ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 16px}
+.links li a{display:block;padding:6px 0;border-bottom:1px solid var(--line);text-decoration:none;font-size:.95rem}
+.links li a:hover{border-color:var(--ink)}
+.cv{display:inline-block;margin-top:18px;background:var(--ink);color:var(--surface);padding:10px 18px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.92rem}
 
-  .proj{padding:18px 0;border-top:1px solid var(--line);display:flex;gap:20px;justify-content:space-between;}
-  .proj:last-child{border-bottom:1px solid var(--line);}
-  .proj-name{font-weight:500;max-width:48ch;}
-  .proj-year{font-family:'Baloo 2',sans-serif;font-weight:600;color:var(--ink-faint);font-size:0.82rem;white-space:nowrap;}
+/* about */
+.about p{max-width:64ch}
+.about p+p{margin-top:12px}
 
-  .contact-box{background:var(--paper);border:1px solid var(--line);padding:36px;display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start;}
-  .contact-links{display:flex;flex-direction:column;gap:10px;}
-  .contact-links a:hover{color:var(--green);}
-  .footnote{margin-top:40px;color:var(--ink-faint);font-size:0.82rem;}
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.92rem}
+
+/* lists with dates */
+.tl{list-style:none}
+.tl li{display:grid;grid-template-columns:92px 1fr;gap:14px;padding:12px 0;border-top:1px solid var(--line)}
+.tl li:first-child{border-top:0;padding-top:0}
+.tl time{font-size:.85rem;color:var(--muted);padding-top:2px}
+.tl h3{font-family:"Public Sans",system-ui,sans-serif;font-size:1rem;font-weight:600;line-height:1.35}
+.tl p{font-size:.92rem;color:var(--muted);margin-top:3px}
+.tag{display:inline-block;font-size:.78rem;font-weight:600;color:var(--sal-solid);margin-bottom:2px}
+.pubs li{grid-template-columns:56px 1fr}
+.pubs h3{font-weight:500}
+.more{display:inline-block;margin-top:14px;font-size:.92rem;font-weight:600}
+
+/* ongoing research */
+.proj{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.proj li{padding:14px 0;border-top:1px solid var(--line)}
+.proj li:nth-child(-n+2){border-top:0;padding-top:0}
+.proj h3{font-family:"Public Sans",system-ui,sans-serif;font-size:1rem;font-weight:600;line-height:1.35;margin-bottom:4px}
+.proj p{font-size:.92rem;color:var(--muted)}
+
+/* review */
+.review{background:var(--now);border-color:transparent}
+.review ul{list-style:none}
+.review li{padding:12px 0;border-top:1px solid rgba(var(--sal),.25);font-size:.93rem}
+.review li:first-child{border-top:0;padding-top:0}
+.review b{display:block;font-weight:600;margin-bottom:2px}
+.review span{color:var(--muted)}
+
+/* simple stacked list */
+.stack ul{list-style:none}
+.stack li{padding:10px 0;border-top:1px solid var(--line);font-size:.93rem}
+.stack li:first-child{border-top:0;padding-top:0}
+.stack b{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:600;font-size:1.05rem;display:block}
+.stack span{color:var(--muted)}
+
+/* patents */
+.patents{background:var(--gold);border-color:transparent;color:var(--gold-ink)}
+.patents .n{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:3.4rem;line-height:1}
+.patents ul{list-style:none;margin-top:14px}
+.patents li{padding:8px 0;border-top:1px solid rgba(0,0,0,.12);font-size:.93rem}
+
+/* ventures */
+.ventures .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ventures b{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:600;font-size:1.15rem;display:block;margin-bottom:4px}
+.ventures p{font-size:.93rem;color:var(--muted)}
+
+/* contact */
+.contact{background:var(--deep);color:var(--deep-ink);border-color:transparent;border-radius:28px;padding:36px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.contact h2{font-size:clamp(1.6rem,3.4vw,2.4rem);font-weight:800;max-width:18ch;margin-bottom:8px}
+.contact p{color:var(--deep-muted)}
+.contact .mail{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:clamp(1.1rem,2.4vw,1.5rem);font-weight:600}
+
+footer{margin-top:22px;font-size:.85rem;color:var(--muted);text-align:center}
+
+/* responsive */
+@media (max-width:980px){
+  .bento{grid-auto-flow:row dense}
+  .s4{grid-column:span 6}
+  .s5,.s7,.s8{grid-column:span 12}
+  .hero{grid-row:auto}
+}
+@media (max-width:640px){
+  body{padding:0 12px 40px}
+  .top{position:static}
+  .bento{grid-template-columns:1fr}
+  .bento>*{grid-column:1/-1 !important}
+  .hero,.card,.contact{padding:22px}
+  .hero,.contact{border-radius:22px}
+  .links ul,.proj,.ventures .grid{grid-template-columns:1fr}
+  .proj li:nth-child(2){border-top:1px solid var(--line);padding-top:14px}
+  .tl li{grid-template-columns:1fr;gap:2px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tok{transition:none}}
+@media print{
+  body{background:#fff;padding:0}
+  .top{position:static}
+  .card,.contact,.now,.review,.patents{background:#fff !important;color:#000 !important;border:1px solid #ccc;break-inside:avoid}
+}
 </style>
 </head>
 <body>
+<div class="wrap">
 
-<div class="shell">
+<header class="top">
+  <a class="mark" href="#about">Anıl Kuş</a>
+  <nav aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#cv">Education</a>
+    <a href="#service">Networks</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <aside class="sidebar">
-    <img class="avatar" src="/images/profile_anil.jpeg" alt="Anıl Kuş">
-    <h2 class="sb-name serif">Anıl Kuş</h2>
-    <p class="sb-role">Lecturer &amp; Researcher<br>PhD Candidate</p>
+<main class="bento">
 
-    <nav class="sb-nav">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#talks">Talks</a>
-      <a href="#visiting">Visiting Research</a>
-      <a href="#events">Events</a>
-      <a href="#publications">Publications</a>
-      <a href="#projects">Projects &amp; Patents</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="sb-foot">
-      <a href="mailto:anil.kus@bozok.edu.tr">anil.kus@bozok.edu.tr</a>
-      <a href="https://github.com/anilkus" target="_blank" rel="noopener">GitHub ↗</a>
-      <a href="https://scholar.google.com/citations?user=YUCnGLkAAAAJ&hl=tr" target="_blank" rel="noopener">Google Scholar ↗</a>
-      <a href="https://www.linkedin.com/in/anil-kus/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a href="https://avesis.bozok.edu.tr/anil.kus" target="_blank" rel="noopener">AVESIS ↗</a>
-      <a href="/files/CV_AnilKus.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+  <!-- Hero -->
+  <section class="card hero s8" id="hero" aria-label="Introduction">
+    <div class="who">
+      <img src="/images/profile_anil.jpeg" alt="Portrait of Anıl Kuş">
+      <div>
+        <h1>Anıl Kuş</h1>
+        <p class="role">Lecturer and Head of Computer Technologies, Yozgat Bozok University<br>PhD Candidate in Computer Engineering, Mersin University</p>
+      </div>
     </div>
-  </aside>
+    <p class="tagline">
+      <span class="tok" style="--w:.2"  title="attribution 0.20">Turning</span>
+      <span class="tok" style="--w:.55" title="attribution 0.55">research</span>
+      <span class="tok" style="--w:.06" title="attribution 0.06">into</span>
+      <span class="tok" style="--w:1"   title="attribution 1.00">reliable,</span>
+      <span class="tok" style="--w:.72" title="attribution 0.72">real-world</span>
+      <span class="tok" style="--w:.5"  title="attribution 0.50">AI</span>
+      <span class="tok" style="--w:.3"  title="attribution 0.30">systems.</span>
+    </p>
+    <div class="legend"><span>Token attribution</span><span class="scale" aria-hidden="true"></span><span>because explainability starts at home</span></div>
+  </section>
 
-  <main>
+  <!-- Now -->
+  <section class="card now s4" aria-label="Currently">
+    <p class="muted"><span class="dot" aria-hidden="true"></span>Right now</p>
+    <p class="big">Visiting researcher at the University of Turku, Finland</p>
+    <p class="muted">Working with TurkuNLP researchers on language model evaluation. Earlier this year: KIT, Karlsruhe.</p>
+  </section>
 
-    <section id="about" class="hero">
-      <p class="eyebrow">AI · NLP · Explainable AI</p>
-      <h1>Turning research into reliable, real-world AI systems.</h1>
-      <p class="lede">
-        I'm a Computer Engineer, lecturer, and PhD researcher in Computer Science at Mersin University, currently serving at Yozgat Bozok University. My work focuses on NLP, Explainable AI, Generative AI, and medical AI systems, with published research on text summarization and disinformation detection.
-      </p>
-      <p class="lede">
-        I combine academic research with real-world product development. Alongside co-founding SmartLab Technology Center, I'm actively building AI-driven startup initiatives, turning research into scalable and responsible AI solutions. My international background — Bahçeşehir University Berlin Campus, CISPA Helmholtz Center for Information Security, and Masaryk University — shapes a global, innovation-oriented perspective.
-      </p>
-      <div class="hero-tags">
-        <span class="tag">AI / ML</span>
-        <span class="tag">NLP</span>
-        <span class="tag">Explainable AI</span>
-        <span class="tag">Generative AI</span>
-        <span class="tag">Medical AI</span>
-      </div>
-    </section>
+  <!-- Links -->
+  <section class="card links s4" aria-label="Academic profiles">
+    <h2>Academic profiles</h2>
+    <ul>
+      <li><a href="https://orcid.org/0000-0002-5964-3727" target="_blank" rel="noopener">ORCID</a></li>
+      <li><a href="https://scholar.google.com/citations?user=YUCnGLkAAAAJ&hl=tr" target="_blank" rel="noopener">Google Scholar</a></li>
+      <li><a href="https://www.scopus.com/authid/detail.uri?authorId=59491177800" target="_blank" rel="noopener">Scopus</a></li>
+      <li><a href="https://www.webofscience.com/wos/author/record/RCY-9020-2026" target="_blank" rel="noopener">Web of Science</a></li>
+      <li><a href="https://www.researchgate.net/profile/Anil-Kus" target="_blank" rel="noopener">ResearchGate</a></li>
+      <li><a href="https://avesis.bozok.edu.tr/anil.kus" target="_blank" rel="noopener">AVESIS</a></li>
+      <li><a href="https://github.com/anilkus" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/anil-kus/" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+    <a class="cv" href="/files/CV_AnilKus.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+  </section>
 
-    <section id="research">
-      <p class="eyebrow">Focus Areas</p>
-      <h2 class="sec-title serif">Research Interests</h2>
-      <div class="grid-2">
-        <div class="interest"><span class="num">01</span><span>Natural Language Processing (NLP)</span></div>
-        <div class="interest"><span class="num">02</span><span>Explainable Artificial Intelligence</span></div>
-        <div class="interest"><span class="num">03</span><span>Generative AI</span></div>
-        <div class="interest"><span class="num">04</span><span>Medical &amp; Clinical AI Systems</span></div>
-        <div class="interest"><span class="num">05</span><span>Text Summarization &amp; Disinformation Detection</span></div>
-        <div class="interest"><span class="num">06</span><span>Machine Learning &amp; Deep Learning</span></div>
-      </div>
-    </section>
+  <!-- About -->
+  <section class="card about s7" id="about">
+    <h2>About</h2>
+    <p>I study how we should judge what language models write. I'm a PhD candidate in Computer Engineering at Mersin University, and one question runs through my work: can we measure, explain and trust model output, especially for Turkish and in high-stakes settings such as clinical text?</p>
+    <p>I lecture in Computer Programming at Yozgat Bozok University, where I head the Computer Technologies Department and coordinate international academic activities. Over the past two years I have worked with groups at KIT, the University of Turku, CISPA and Masaryk University, and I contribute to three EU COST Actions.</p>
+  </section>
 
-    <section id="talks">
-      <p class="eyebrow">Presentations</p>
-      <h2 class="sec-title serif">Talks</h2>
-      <div class="tl-item">
-        <div class="tl-date">2026</div>
-        <div>
-          <span class="badge">Selected Flash Talk</span>
-          <p class="tl-title">Can We Trust This Model? Human-Centered Evaluation Metrics for Clinical AI Systems</p>
-          <p class="tl-venue">ELSA Workshop — TrustworthyAI4Health: Toward Trustworthy AI Modeling for Computational Healthcare</p>
-          <p class="tl-desc">A selected flash talk on human-centered evaluation metrics for clinical AI systems, presented at ELSA's workshop on trustworthy AI modeling for computational healthcare.</p>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">2025</div>
-        <div>
-          <span class="badge">Poster</span>
-          <p class="tl-title">Entity-Level Insights Into Trustworthy Turkish NLP</p>
-          <p class="tl-venue">CISPA-ELLIS Summer School — Trustworthy AI: Secure and Safe Models, Saarbrücken, Germany</p>
-        </div>
-      </div>
-    </section>
+  <!-- Interests -->
+  <section class="card s5" aria-label="Research interests">
+    <h2>Research interests</h2>
+    <div class="chips">
+      <span>Evaluation of language models</span>
+      <span>LLM-as-a-Judge</span>
+      <span>Turkish NLP</span>
+      <span>Text summarization</span>
+      <span>Explainable AI</span>
+      <span>Hallucination detection</span>
+      <span>Clinical NLP</span>
+      <span>Adversarial ML</span>
+      <span>Machine unlearning</span>
+      <span>Disinformation detection</span>
+    </div>
+  </section>
 
-    <section id="visiting">
-      <p class="eyebrow">Visiting Positions</p>
-      <h2 class="sec-title serif">Visiting Research</h2>
-      <div class="tl-item">
-        <div class="tl-date">Jul – Sep 2026</div>
-        <div>
-          <p class="tl-title">Visiting Researcher</p>
-          <p class="tl-venue">Karlsruhe Institute of Technology (KIT), Germany</p>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">Sep – Oct 2026</div>
-        <div>
-          <p class="tl-title">Visiting Researcher</p>
-          <p class="tl-venue">University of Turku, Finland</p>
-        </div>
-      </div>
-    </section>
 
-    <section id="events">
-      <p class="eyebrow">Training Schools</p>
-      <h2 class="sec-title serif">Events</h2>
-      <div class="tl-item">
-        <div class="tl-date">Sep 2026</div>
-        <div>
-          <span class="badge">COST Action · InsectAI</span>
-          <p class="tl-title">ACCESS 2026 Training School</p>
-          <p class="tl-venue">Kaløvigcenter, Denmark — 14–18 September 2026</p>
-          <p class="tl-desc">Attending under an InsectAI COST Action grant, working on a team project estimating morphological traits (wing, body, leg size) from insect images across an ecological gradient (elevation, latitude). Pipeline: camera-trap images → annotation with Flatbug + Label Studio → the LEPY trait-extraction pipeline.</p>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">2025</div>
-        <div>
-          <p class="tl-title">Summer AI Lab</p>
-          <p class="tl-venue">Masaryk University, Brno, Czechia</p>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">2025</div>
-        <div>
-          <p class="tl-title">CISPA-ELLIS Summer School — Trustworthy AI</p>
-          <p class="tl-venue">CISPA Helmholtz Center for Information Security, Saarbrücken, Germany</p>
-        </div>
-      </div>
-    </section>
+  <!-- Ongoing research -->
+  <section class="card s8" id="research">
+    <div class="head"><h2>Ongoing research</h2><span>2026</span></div>
+    <ul class="proj">
+      <li><h3>Hallucination mitigation in clinical summarization</h3><p>A dual-stage framework pairing small-language-model NLI with UMLS concept mapping and negation detection.</p></li>
+      <li><h3>Region-grounded verification for medical image reports</h3><p>RGKV-X: grounding radiology report claims in image regions and medical ontologies, with an LLM arbitration layer. Joint work with TUIT, Tashkent.</p></li>
+      <li><h3>A Turkish research-article corpus from HPLT 4.0</h3><p>Register-based filtering of 334 GB of Turkish web data on the LUMI supercomputer, yielding about 280K research-article documents.</p></li>
+      <li><h3>Robustness of LLM-as-a-Judge</h3><p>How adversarial inputs shift automatic judges, and how explanations themselves can be attacked.</p></li>
+      <li><h3>XAI-guided attacks on smart grid data</h3><p>Using attributions to design missingness attacks and test the robustness of imputation methods.</p></li>
+      <li><h3>Cross-lingual machine unlearning</h3><p>A benchmark of unlearning methods for NER across Turkish, German and Spanish.</p></li>
+    </ul>
+  </section>
 
-    <section id="publications">
-      <p class="eyebrow">Selected Publications</p>
-      <h2 class="sec-title serif">Publications</h2>
-      <div class="tl-item">
-        <div class="tl-date">—</div>
-        <div>
-          <p class="tl-title">Detecting Disinformation In Turkish News Using Explainable Artificial Intelligence Approaches</p>
-          <p class="tl-desc">A. Kuş and B. Can</p>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">2024</div>
-        <div>
-          <p class="tl-title">A Hybrid Approach to Automatic Text Summarization of Turkish Texts: Integrating Extractive Methods with LLMs</p>
-          <p class="tl-desc">A. Kuş and Ç. İ. Acı — Innovations in Intelligent Systems and Applications Conference (ASYU), Ankara. doi: 10.1109/ASYU62119.2024.10757122</p>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">2024</div>
-        <div>
-          <p class="tl-title">Can NLP Combined with AI Prevent Language Extinction: A Case Study of Turkish</p>
-          <p class="tl-desc">A. Kuş and Ç. İ. Acı — International Conference on Engineering, Natural Sciences, and Technological Developments (ICENSTED)</p>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">2023</div>
-        <div>
-          <p class="tl-title">Performance Evaluation of the Extractive Methods in Automatic Text Summarization Using Medical Papers</p>
-          <p class="tl-desc">A. Kuş and Ç. İ. Acı — GMBD, vol. 9, no. 4, ICAIAME 2023, pp. 14–22</p>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">2023</div>
-        <div>
-          <p class="tl-title">An Extractive Text Summarization Model for Generating Extended Abstracts of Medical Papers in Turkish</p>
-          <p class="tl-desc">A. Kuş and Ç. İ. Acı — Bilgisayar Bilimleri ve Teknolojileri Dergisi, 4(1), 19–26</p>
-        </div>
-      </div>
-      <p style="margin-top:20px;">
-        <a href="https://scholar.google.com/citations?user=YUCnGLkAAAAJ&hl=tr" target="_blank" rel="noopener" style="border-bottom:1px solid var(--green);color:var(--green);">
-          All publications (Google Scholar) ↗
-        </a>
-      </p>
-    </section>
+  <!-- Under review -->
+  <section class="card review s4" aria-label="Submitted work">
+    <h2>Submitted</h2>
+    <ul>
+      <li><b>LLM judge agreement across languages</b><span>With M. J. Tirado Campo. IDAP 2026, IEEE</span></li>
+      <li><b>Reference-based metrics vs. LLM evaluators for scientific summarization</b><span>Language Resources and Evaluation, Springer. In revision</span></li>
+      <li><b>Cross-lingual machine unlearning benchmark</b><span>ML in PL 2026</span></li>
+    </ul>
+  </section>
 
-    <section id="projects">
-      <p class="eyebrow">Applied Work</p>
-      <h2 class="sec-title serif">Projects &amp; Patents</h2>
-      <div class="proj">
-        <span class="proj-name">CA24147 — Artificial Intelligence Driven Dental Age Estimation Network (AID-AgE), WG3 &amp; WG5 Member</span>
-        <span class="proj-year">2025 – Ongoing</span>
-      </div>
-      <div class="proj">
-        <span class="proj-name">CA22103 — A Comprehensive Network Against Brain Cancer (Net4Brain), WG4 Member</span>
-        <span class="proj-year">2023 – Ongoing</span>
-      </div>
-      <div class="proj">
-        <span class="proj-name">CA22129 — Using Image-based AI for Insect Monitoring &amp; Conservation (InsectAI), WG3 &amp; WG4 Member</span>
-        <span class="proj-year">2023 – Ongoing</span>
-      </div>
-      <div class="proj">
-        <span class="proj-name">Control and Evaluation System for Smart Refrigerators — Utility Model (officially registered)</span>
-        <span class="proj-year">2025</span>
-      </div>
-      <div class="proj">
-        <span class="proj-name">SmartGate — Smart Security Door System — Utility Model (officially registered)</span>
-        <span class="proj-year">2023</span>
-      </div>
-    </section>
+  <!-- Publications -->
+  <section class="card s8" id="publications">
+    <div class="head"><h2>Publications</h2><span>Selected</span></div>
+    <ul class="tl pubs">
+      <li><time>Forth.</time><div>
+        <h3>Detecting disinformation in Turkish news using explainable artificial intelligence approaches</h3>
+        <p>A. Kuş, B. Can</p></div></li>
+      <li><time>2024</time><div>
+        <span class="tag">IEEE</span>
+        <h3><a href="https://doi.org/10.1109/ASYU62119.2024.10757122" target="_blank" rel="noopener">A hybrid approach to automatic text summarization of Turkish texts: integrating extractive methods with LLMs</a></h3>
+        <p>A. Kuş, Ç. İ. Acı. Innovations in Intelligent Systems and Applications Conference (ASYU), Ankara</p></div></li>
+      <li><time>2024</time><div>
+        <h3>Can NLP combined with AI prevent language extinction: a case study of Turkish</h3>
+        <p>A. Kuş, Ç. İ. Acı. ICENSTED</p></div></li>
+      <li><time>2023</time><div>
+        <h3>Performance evaluation of the extractive methods in automatic text summarization using medical papers</h3>
+        <p>A. Kuş, Ç. İ. Acı. GMBD 9(4), ICAIAME 2023, pp. 14–22</p></div></li>
+      <li><time>2023</time><div>
+        <span class="tag">Journal</span>
+        <h3>An extractive text summarization model for generating extended abstracts of medical papers in Turkish</h3>
+        <p>A. Kuş, Ç. İ. Acı. Bilgisayar Bilimleri ve Teknolojileri Dergisi 4(1), 19–26</p></div></li>
+    </ul>
+    <a class="more" href="https://scholar.google.com/citations?user=YUCnGLkAAAAJ&hl=tr" target="_blank" rel="noopener">Full list on Google Scholar</a>
+  </section>
 
-    <section id="contact">
-      <p class="eyebrow">Get in Touch</p>
-      <h2 class="sec-title serif">Contact</h2>
-      <div class="contact-box">
-        <p class="sub" style="margin:0;max-width:36ch;color:var(--ink-soft);">Reach out for collaboration, advising, or research opportunities.</p>
-        <div class="contact-links">
-          <a href="mailto:anil.kus@bozok.edu.tr">anil.kus@bozok.edu.tr</a>
-          <a href="https://github.com/anilkus" target="_blank" rel="noopener">github.com/anilkus</a>
-          <a href="https://www.linkedin.com/in/anil-kus/" target="_blank" rel="noopener">linkedin.com/in/anil-kus</a>
-          <a href="https://avesis.bozok.edu.tr/anil.kus" target="_blank" rel="noopener">avesis.bozok.edu.tr/anil.kus</a>
-        </div>
-      </div>
-      <p class="footnote">© <span id="year"></span> Anıl Kuş</p>
-    </section>
+  <!-- Talks -->
+  <section class="card s4" id="talks">
+    <h2>Talks</h2>
+    <ul class="tl">
+      <li><time>2026</time><div>
+        <span class="tag">Selected flash talk</span>
+        <h3>Can we trust this model? Human-centered evaluation metrics for clinical AI systems</h3>
+        <p>ELSA Workshop, TrustworthyAI4Health</p></div></li>
+      <li><time>2025</time><div>
+        <span class="tag">Poster</span>
+        <h3>Entity-level insights into trustworthy Turkish NLP</h3>
+        <p>CISPA-ELLIS Summer School on Trustworthy AI, Saarbrücken</p></div></li>
+    </ul>
+  </section>
 
-  </main>
+  <!-- Education -->
+  <section class="card s6" id="cv">
+    <h2>Education</h2>
+    <ul class="tl">
+      <li><time>Ongoing</time><div>
+        <h3>PhD, Computer Engineering</h3><p>Mersin University. Candidate, supervised by Assoc. Prof. Çiğdem İnan Acı</p></div></li>
+      <li><time>2021–2023</time><div>
+        <h3>MSc, Computer Engineering</h3><p>Mersin University. Automatic summarization of Turkish health-domain papers with NLP and deep learning, on a new 412-paper dataset</p></div></li>
+      <li><time>2011–2015</time><div>
+        <h3>BSc, Software Engineering</h3><p>Bahçeşehir University, Istanbul. Exchange year at the Berlin Campus, 2012–2013</p></div></li>
+    </ul>
+  </section>
+
+  <!-- Positions -->
+  <section class="card s6" aria-label="Academic positions">
+    <h2>Positions</h2>
+    <ul class="tl">
+      <li><time>2025–now</time><div>
+        <h3>Lecturer, Yozgat Bozok University</h3><p>Head of Computer Technologies Department and International Academic Activities Coordinator, Boğazlıyan Vocational School</p></div></li>
+      <li><time>2026</time><div>
+        <h3>Visiting Researcher</h3><p>Karlsruhe Institute of Technology, Jul–Sep. University of Turku, Sep–Oct</p></div></li>
+      <li><time>2021–2023</time><div>
+        <h3>Assistant Director, Toros University</h3><p>Vocational School</p></div></li>
+      <li><time>2019–2021</time><div>
+        <h3>Head of Computer Technologies, Toros University</h3><p>Co-founded SmartLab Technology Center</p></div></li>
+    </ul>
+  </section>
+
+  <!-- COST -->
+  <section class="card stack s6" id="service">
+    <h2>EU COST Actions</h2>
+    <ul>
+      <li><b>Net4Brain, CA22103</b><span>A comprehensive network against brain cancer. WG4 member and section lead for clinical interpretability in the WG4–WG5 perspective paper. 2023–</span></li>
+      <li><b>InsectAI, CA22129</b><span>Image-based AI for insect monitoring and conservation. WG3 and WG4. Grant holder, ACCESS 2026 Training School, Denmark. 2023–</span></li>
+      <li><b>AID-AgE, CA24147</b><span>AI-driven dental age estimation network. WG3 and WG5. 2025–</span></li>
+    </ul>
+  </section>
+
+  <!-- Schools -->
+  <section class="card stack s6" aria-label="Schools and labs">
+    <h2>Schools and labs</h2>
+    <ul>
+      <li><b>ACCESS 2026 Training School</b><span>Kaløvigcenter, Denmark, Sep 2026. Estimating insect morphological traits from camera-trap images</span></li>
+      <li><b>Summer AI Lab</b><span>Masaryk University, Brno, 2025</span></li>
+      <li><b>CISPA-ELLIS Summer School on Trustworthy AI</b><span>CISPA Helmholtz Center for Information Security, Saarbrücken, 2025</span></li>
+    </ul>
+  </section>
+
+  <!-- Patents -->
+  <section class="card patents s4" aria-label="Registered utility models">
+    <p class="n">2</p>
+    <p>registered utility models</p>
+    <ul>
+      <li>Control and evaluation system for smart refrigerators, 2025</li>
+      <li>SmartGate, a smart security door system, 2023</li>
+    </ul>
+  </section>
+
+  <!-- Ventures -->
+  <section class="card ventures s8" aria-label="Ventures">
+    <h2>Building outside the lab</h2>
+    <div class="grid">
+      <div><b>Zorbalama</b><p>Co-founder. An LLM-powered platform for anonymous reporting of workplace mobbing.</p></div>
+      <div><b>SmartLab Technology Center</b><p>Co-founder. An applied technology lab started at Toros University.</p></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact s12" id="contact">
+    <div>
+      <h2>Let's work on something together.</h2>
+      <p>Collaboration, joint projects or research visits. I'm happy to talk.</p>
+    </div>
+    <a class="mail" href="mailto:anil.kus@bozok.edu.tr">anil.kus@bozok.edu.tr</a>
+  </section>
+
+</main>
+
+<footer>© <span id="year">2026</span> Anıl Kuş</footer>
 </div>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  var sections = document.querySelectorAll('main section[id]');
-  var links = document.querySelectorAll('.sb-nav a');
-  window.addEventListener('scroll', function(){
-    var pos = window.scrollY + 120;
-    sections.forEach(function(sec){
-      var link = document.querySelector('.sb-nav a[href="#' + sec.id + '"]');
-      if(!link) return;
-      if(pos >= sec.offsetTop && pos < sec.offsetTop + sec.offsetHeight){
-        links.forEach(function(l){ l.classList.remove('active'); });
-        link.classList.add('active');
-      }
-    });
-  });
+  // Attribution map fades in once on load.
+  (function(){
+    var h=document.getElementById('hero');
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce){h.classList.add('lit');return;}
+    setTimeout(function(){h.classList.add('lit');},350);
+  })();
+
+  // Highlight the current section in the nav.
+  (function(){
+    var links=[].slice.call(document.querySelectorAll('.top nav a'));
+    var targets=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+    function update(){
+      var pos=window.scrollY+120, cur=-1;
+      targets.forEach(function(t,i){ if(t && t.getBoundingClientRect().top+window.scrollY<=pos) cur=i; });
+      links.forEach(function(l,i){ l.classList.toggle('active',i===cur); });
+    }
+    window.addEventListener('scroll',update,{passive:true});
+    update();
+  })();
 </script>
 </body>
 </html>
