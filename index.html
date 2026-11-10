@@ -11,23 +11,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Baloo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#ffffff;
-    --ink:#171b1f;
-    --ink-soft:#565f6b;
-    --ink-faint:#8b93a0;
-    --line:#e2e2dc;
-    --line-strong:#c8c8c0;
-    --green:#2f4a3c;
-    --green-soft:#e9efe9;
-    --amber:#9c7a2e;
-    --paper:#fbfaf7;
+    --bg:#0b1220;
+    --ink:#e8eefc;
+    --ink-soft:#b8c4e6;
+    --ink-faint:#8f9cc4;
+    --line:rgba(255,255,255,.12);
+    --line-strong:rgba(255,255,255,.22);
+    --green:#6ea8ff;
+    --green-soft:rgba(110,168,255,.14);
+    --amber:#b79cff;
+    --paper:rgba(255,255,255,.04);
     --max:1180px;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     margin:0;
-    background:var(--bg);
+    background: radial-gradient(1200px 700px at 15% 10%, rgba(139,92,246,.24), transparent 55%),
+                radial-gradient(900px 600px at 85% 20%, rgba(110,168,255,.22), transparent 55%),
+                linear-gradient(180deg, #070b15 0%, var(--bg) 55%, #050814 100%);
+    background-attachment:fixed;
     color:var(--ink);
     font-family:'Baloo 2', system-ui, sans-serif;
     font-size:16px;
@@ -50,6 +53,8 @@
     position:sticky;top:0;align-self:start;height:100vh;
     padding:48px 32px 32px 40px;
     border-right:1px solid var(--line);
+    background:rgba(7,11,21,.55);
+    backdrop-filter:blur(10px);
     display:flex;flex-direction:column;
   }
   @media (max-width:900px){.sidebar{position:relative;height:auto;border-right:none;border-bottom:1px solid var(--line);padding:32px 24px;}}
@@ -74,7 +79,7 @@
   .hero{padding-top:8px;}
   .hero h1{font-size:3.2rem;line-height:1.15;margin:0 0 18px;max-width:16ch;}
   .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;}
-  .tag{font-family:'Baloo 2',sans-serif;font-weight:600;font-size:0.74rem;color:var(--green);background:var(--green-soft);border:1px solid #d7e2d9;padding:4px 10px;border-radius:100px;}
+  .tag{font-family:'Baloo 2',sans-serif;font-weight:600;font-size:0.74rem;color:var(--green);background:var(--green-soft);border:1px solid rgba(110,168,255,.28);padding:4px 10px;border-radius:100px;}
 
   .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:8px 40px;}
   @media (max-width:640px){.grid-2{grid-template-columns:1fr;}}
@@ -88,14 +93,14 @@
   .tl-title{font-size:1.05rem;margin:0 0 6px;font-weight:600;font-family:'Baloo 2';}
   .tl-venue{color:var(--green);font-size:0.9rem;margin:0 0 6px;}
   .tl-desc{color:var(--ink-soft);font-size:0.92rem;max-width:58ch;}
-  .badge{display:inline-block;font-family:'Baloo 2',sans-serif;font-weight:600;font-size:0.68rem;color:var(--amber);border:1px solid #e3d6b8;background:#fbf6ea;padding:2px 8px;border-radius:100px;margin-bottom:8px;}
+  .badge{display:inline-block;font-family:'Baloo 2',sans-serif;font-weight:600;font-size:0.68rem;color:var(--amber);border:1px solid rgba(139,92,246,.4);background:rgba(139,92,246,.16);padding:2px 8px;border-radius:100px;margin-bottom:8px;}
 
   .proj{padding:18px 0;border-top:1px solid var(--line);display:flex;gap:20px;justify-content:space-between;}
   .proj:last-child{border-bottom:1px solid var(--line);}
   .proj-name{font-weight:500;max-width:48ch;}
   .proj-year{font-family:'Baloo 2',sans-serif;font-weight:600;color:var(--ink-faint);font-size:0.82rem;white-space:nowrap;}
 
-  .contact-box{background:var(--paper);border:1px solid var(--line);padding:36px;display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start;}
+  .contact-box{background:linear-gradient(180deg, rgba(15,26,51,.92), rgba(11,18,32,.92));border:1px solid var(--line);border-radius:18px;box-shadow:0 16px 40px rgba(0,0,0,.35);padding:36px;display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start;}
   .contact-links{display:flex;flex-direction:column;gap:10px;}
   .contact-links a:hover{color:var(--green);}
   .footnote{margin-top:40px;color:var(--ink-faint);font-size:0.82rem;}
