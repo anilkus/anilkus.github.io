@@ -1,416 +1,574 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anıl Kuş | Academic Profile</title>
-<meta name="description" content="Anıl Kuş, lecturer and PhD researcher in NLP, explainable AI and trustworthy language models.">
-<meta property="og:title" content="Anıl Kuş | Academic Profile">
-<meta property="og:description" content="NLP, explainable AI and trustworthy language models.">
-<meta property="og:image" content="https://anilkus.github.io/images/profile_anil.jpeg">
+<meta name="description" content="Anıl Kuş, researcher and lecturer working on AI, NLP, and Explainable AI.">
 <link href="/images/profile_anil.jpeg" rel="icon">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Anıl Kuş","jobTitle":"Lecturer and PhD Researcher",
-"affiliation":{"@type":"CollegeOrUniversity","name":"Yozgat Bozok University"},
-"url":"https://anilkus.github.io/","image":"https://anilkus.github.io/images/profile_anil.jpeg",
-"sameAs":["https://orcid.org/0000-0002-5964-3727","https://scholar.google.com/citations?user=YUCnGLkAAAAJ&hl=tr","https://www.linkedin.com/in/anil-kus/","https://github.com/anilkus","https://www.researchgate.net/profile/Anil-Kus","https://avesis.bozok.edu.tr/anil.kus"]}
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Baloo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#F2F4F7;
-  --card:#FFFFFF;
-  --ink:#0E1A2B;
-  --muted:#5B677A;
-  --line:#E1E6ED;
-  --accent:#0E9F9A;
-  --accent-2:#3B6FF5;
-  --hero:#0B1D33;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#0A1220; --card:#111C2E; --ink:#E8EEF6; --muted:#93A1B5; --line:#1E2B40;
-    --accent:#2CC7C1; --accent-2:#6E93FF; --hero:#07111F;
+  :root{
+    --bg:#ffffff;
+    --ink:#171b1f;
+    --ink-soft:#565f6b;
+    --ink-faint:#8b93a0;
+    --line:#e2e2dc;
+    --line-strong:#c8c8c0;
+    --green:#2f4a3c;
+    --green-soft:#e9efe9;
+    --amber:#9c7a2e;
+    --paper:#fbfaf7;
+    --max:1180px;
   }
-}
-:root[data-theme="dark"]{
-  --bg:#0A1220; --card:#111C2E; --ink:#E8EEF6; --muted:#93A1B5; --line:#1E2B40;
-  --accent:#2CC7C1; --accent-2:#6E93FF; --hero:#07111F;
-}
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Baloo 2', system-ui, sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{
+    font-family:'Bangers', cursive;
+    font-weight:400;
+    letter-spacing:0.03em;
+  }
+  a{color:inherit;text-decoration:none;}
+  .mono{font-family:'Baloo 2', sans-serif; font-weight:600;}
+  ::selection{background:var(--green-soft);}
 
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font:400 16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
-h1,h2,h3{font-family:Sora,Inter,system-ui,sans-serif;line-height:1.2}
-.container{max-width:1080px;margin:0 auto;padding:0 20px}
-section[id]{scroll-margin-top:80px}
+  .shell{display:grid;grid-template-columns:300px 1fr;max-width:var(--max);margin:0 auto;}
+  @media (max-width:900px){.shell{grid-template-columns:1fr;}}
 
-/* nav */
-.nav{position:fixed;inset:0 0 auto 0;z-index:20;transition:background .3s,box-shadow .3s}
-.nav.scrolled{background:color-mix(in srgb,var(--card) 85%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
-.nav .container{display:flex;justify-content:space-between;align-items:center;height:64px}
-.nav .logo{font-family:Sora,sans-serif;font-weight:700;color:#fff;transition:color .3s}
-.nav ul{list-style:none;display:flex;gap:26px;font-size:.93rem}
-.nav ul a{color:rgba(255,255,255,.75);transition:color .2s}
-.nav ul a:hover{color:#fff}
-.nav.scrolled .logo{color:var(--ink)}
-.nav.scrolled ul a{color:var(--muted)}
-.nav.scrolled ul a:hover{color:var(--ink)}
-@media (max-width:720px){.nav ul{display:none}}
+  .sidebar{
+    position:sticky;top:0;align-self:start;height:100vh;
+    padding:48px 32px 32px 40px;
+    border-right:1px solid var(--line);
+    display:flex;flex-direction:column;
+  }
+  @media (max-width:900px){.sidebar{position:relative;height:auto;border-right:none;border-bottom:1px solid var(--line);padding:32px 24px;}}
+  .avatar{width:76px;height:76px;border-radius:50%;object-fit:cover;border:1px solid var(--line-strong);margin-bottom:20px;}
+  .sb-name{font-size:1.5rem;margin:0 0 4px;}
+  .sb-role{color:var(--ink-soft);font-size:0.92rem;line-height:1.5;margin:0 0 24px;}
+  .sb-nav{display:flex;flex-direction:column;gap:2px;margin-bottom:auto;font-size:0.92rem;}
+  .sb-nav a{padding:7px 0;color:var(--ink-soft);border-left:2px solid transparent;padding-left:12px;margin-left:-12px;transition:color .15s, border-color .15s;}
+  .sb-nav a:hover,.sb-nav a.active{color:var(--ink);border-left-color:var(--green);}
+  .sb-foot{padding-top:24px;margin-top:24px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:8px;font-size:0.86rem;}
+  .sb-foot a{color:var(--ink-soft);}
+  .sb-foot a:hover{color:var(--green);}
 
-/* hero */
-.hero{position:relative;overflow:hidden;background:var(--hero);color:#fff;padding:140px 0 110px}
-.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;animation:drift 18s ease-in-out infinite alternate}
-.blob.b1{width:520px;height:520px;background:#0E9F9A;top:-160px;left:-120px}
-.blob.b2{width:460px;height:460px;background:#3B6FF5;bottom:-200px;right:-80px;animation-duration:22s}
-.blob.b3{width:300px;height:300px;background:#7C5CFF;top:40%;left:55%;animation-duration:26s;opacity:.35}
-@keyframes drift{
-  0%{transform:translate(0,0) scale(1)}
-  50%{transform:translate(60px,40px) scale(1.1)}
-  100%{transform:translate(-40px,20px) scale(.95)}
-}
-.hero .container{position:relative;display:flex;align-items:center;gap:48px}
-.photo{width:168px;height:168px;border-radius:50%;object-fit:cover;flex:none;border:4px solid rgba(255,255,255,.15);box-shadow:0 20px 50px rgba(0,0,0,.35)}
-.hero h1{font-size:clamp(2.4rem,6vw,3.8rem);font-weight:700;letter-spacing:-.02em}
-.typed{font-family:Sora,sans-serif;font-size:clamp(1.1rem,2.4vw,1.45rem);color:#7FE3DF;margin:6px 0 14px;min-height:1.6em}
-.typed .caret{display:inline-block;width:2px;height:1.1em;background:currentColor;margin-left:3px;vertical-align:-2px;animation:blink 1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-.hero p.sub{color:rgba(255,255,255,.75);max-width:46ch}
-.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;font-weight:600;font-size:.93rem;transition:transform .2s,background .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn.primary{background:#fff;color:var(--hero)}
-.btn.ghost{border:1px solid rgba(255,255,255,.3);color:#fff}
-.btn.ghost:hover{background:rgba(255,255,255,.1)}
-.icon-row{display:flex;gap:10px;margin-left:4px}
-.ic{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(255,255,255,.3);transition:transform .2s,background .2s}
-.ic:hover{transform:translateY(-2px);background:rgba(255,255,255,.12)}
-.ic svg{width:18px;height:18px;fill:#fff}
-@media (max-width:720px){
-  .hero{padding:110px 0 80px}
-  .hero .container{flex-direction:column;align-items:flex-start;gap:28px}
-  .photo{width:120px;height:120px}
-}
+  main{padding:56px 48px 80px;}
+  @media (max-width:900px){main{padding:40px 24px 60px;}}
+  section{margin-bottom:76px;scroll-margin-top:24px;}
+  .eyebrow{font-family:'Baloo 2',sans-serif;font-weight:600;font-size:0.74rem;color:var(--amber);letter-spacing:.02em;margin:0 0 10px;}
+  .sec-title{font-size:2.1rem;margin:0 0 28px;max-width:26ch;}
+  .lede{font-size:1.18rem;line-height:1.65;max-width:56ch;color:var(--ink);}
+  .lede + .lede{margin-top:16px;}
 
-/* ticker */
-.ticker{background:var(--card);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap}
-.track{display:inline-flex;gap:40px;padding:16px 0;animation:scroll 40s linear infinite}
-.track span{font-family:Sora,sans-serif;font-weight:600;color:var(--muted);display:inline-flex;align-items:center;gap:40px}
-.track span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
-@keyframes scroll{to{transform:translateX(-50%)}}
+  .hero{padding-top:8px;}
+  .hero h1{font-size:3.2rem;line-height:1.15;margin:0 0 18px;max-width:16ch;}
+  .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;}
+  .tag{font-family:'Baloo 2',sans-serif;font-weight:600;font-size:0.74rem;color:var(--green);background:var(--green-soft);border:1px solid #d7e2d9;padding:4px 10px;border-radius:100px;}
 
-/* stats */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:56px auto 0}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;text-align:center}
-.stat b{display:block;font-family:Sora,sans-serif;font-size:2.4rem;font-weight:700;background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.stat span{color:var(--muted);font-size:.9rem}
-@media (max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:8px 40px;}
+  @media (max-width:640px){.grid-2{grid-template-columns:1fr;}}
+  .interest{padding:16px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;}
+  .interest .num{font-family:'Baloo 2',sans-serif;font-weight:600;color:var(--ink-faint);font-size:0.82rem;padding-top:2px;}
 
-/* blocks */
-.block{margin-top:72px}
-.block h2{font-size:1.7rem;margin-bottom:22px}
-.lead{font-size:1.1rem;color:var(--muted);max-width:62ch}
+  .tl-item{display:grid;grid-template-columns:130px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--line);}
+  @media (max-width:640px){.tl-item{grid-template-columns:1fr;gap:6px;}}
+  .tl-item:last-child{border-bottom:1px solid var(--line);}
+  .tl-date{font-family:'Baloo 2',sans-serif;font-weight:600;font-size:0.8rem;color:var(--ink-faint);padding-top:3px;}
+  .tl-title{font-size:1.05rem;margin:0 0 6px;font-weight:600;font-family:'Baloo 2';}
+  .tl-venue{color:var(--green);font-size:0.9rem;margin:0 0 6px;}
+  .tl-desc{color:var(--ink-soft);font-size:0.92rem;max-width:58ch;}
+  .badge{display:inline-block;font-family:'Baloo 2',sans-serif;font-weight:600;font-size:0.68rem;color:var(--amber);border:1px solid #e3d6b8;background:#fbf6ea;padding:2px 8px;border-radius:100px;margin-bottom:8px;}
 
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;transition:transform .25s,box-shadow .25s,border-color .25s}
-.card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(14,26,43,.08);border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
+  .proj{padding:18px 0;border-top:1px solid var(--line);display:flex;gap:20px;justify-content:space-between;}
+  .proj:last-child{border-bottom:1px solid var(--line);}
+  .proj-name{font-weight:500;max-width:48ch;}
+  .proj-year{font-family:'Baloo 2',sans-serif;font-weight:600;color:var(--ink-faint);font-size:0.82rem;white-space:nowrap;}
 
-/* visiting */
-.visits{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.visit{position:relative;overflow:hidden;padding:28px}
-.visit::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
-.v-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
-.when{font-size:.85rem;color:var(--muted);font-weight:500}
-.live{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;color:var(--accent)}
-.live i{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 1.8s ease-out infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 60%,transparent)}100%{box-shadow:0 0 0 10px transparent}}
-.visit h3{font-size:1.35rem;margin-bottom:4px}
-.unit{color:var(--muted);font-size:.95rem}
-.group{display:inline-block;margin:14px 0 12px;font-family:Sora,sans-serif;font-weight:600;font-size:.9rem;color:var(--accent-2);background:color-mix(in srgb,var(--accent-2) 12%,transparent);padding:5px 12px;border-radius:999px}
-.focus{font-size:.95rem}
-.place{color:var(--muted);font-size:.85rem;margin-top:10px}
-@media (max-width:720px){.visits{grid-template-columns:1fr}}
-
-/* publications */
-.pubs{display:grid;gap:12px}
-.pub{display:flex;gap:18px;align-items:flex-start}
-.year{flex:none;font-family:Sora,sans-serif;font-weight:600;font-size:.85rem;color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);border-radius:8px;padding:4px 10px}
-.pub h3{font-family:Inter,sans-serif;font-size:1rem;font-weight:600;line-height:1.4}
-.pub p{color:var(--muted);font-size:.9rem;margin-top:2px}
-.link{display:inline-block;margin-top:18px;font-weight:600;color:var(--accent)}
-.link:hover{text-decoration:underline;text-underline-offset:3px}
-
-/* timeline */
-.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.timeline{list-style:none;position:relative;padding-left:22px}
-.timeline::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:var(--line)}
-.timeline li{position:relative;padding-bottom:18px}
-.timeline li:last-child{padding-bottom:0}
-.timeline li::before{content:"";position:absolute;left:-22px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--card);border:2px solid var(--accent)}
-.timeline small{color:var(--muted);font-size:.82rem}
-.timeline b{display:block;font-weight:600}
-.timeline span{color:var(--muted);font-size:.92rem}
-.card h3.t{font-size:1.1rem;margin-bottom:16px}
-
-/* highlights */
-.grid4{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.hl ul{list-style:none;display:grid;gap:10px}
-.hl li{font-size:.94rem}
-.hl li span{display:block;color:var(--muted);font-size:.85rem}
-@media (max-width:720px){.two,.grid4{grid-template-columns:1fr}}
-
-/* contact */
-.contact{margin-top:72px;background:var(--hero);color:#fff;border-radius:24px;padding:40px;position:relative;overflow:hidden}
-.contact .blob{opacity:.35}
-.contact .inner{position:relative;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
-.contact h2{font-size:1.8rem;margin-bottom:6px}
-.contact p{color:rgba(255,255,255,.7)}
-.contact .links{display:flex;flex-wrap:wrap;gap:10px}
-.contact .btn.ghost svg{width:18px;height:18px;fill:#fff}
-.btn.linkedin{background:#0A66C2;color:#fff}
-.btn.linkedin svg{width:18px;height:18px;fill:#fff}
-
-footer{text-align:center;color:var(--muted);font-size:.85rem;padding:36px 0}
-
-/* scroll reveal */
-.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
-.js .reveal.in{opacity:1;transform:none}
-
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .blob,.track,.typed .caret,.live i{animation:none}
-  .js .reveal{opacity:1;transform:none;transition:none}
-  .card,.btn,.ic{transition:none}
-}
+  .contact-box{background:var(--paper);border:1px solid var(--line);padding:36px;display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start;}
+  .contact-links{display:flex;flex-direction:column;gap:10px;}
+  .contact-links a:hover{color:var(--green);}
+  .footnote{margin-top:40px;color:var(--ink-faint);font-size:0.82rem;}
 </style>
 </head>
 <body>
-<script>document.documentElement.classList.add('js')</script>
 
-<nav class="nav" id="nav">
-  <div class="container">
-    <a class="logo" href="#top">Anıl Kuş</a>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#visiting">Visiting</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#highlights">Highlights</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+<div class="shell">
 
-<header class="hero" id="top">
-  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
-  <div class="container">
-    <img class="photo" src="/images/profile_anil.jpeg" alt="Anıl Kuş">
-    <div>
-      <h1>Anıl Kuş</h1>
-      <p class="typed"><span id="typed">NLP Researcher</span><span class="caret"></span></p>
-      <p class="sub">Lecturer at Yozgat Bozok University and PhD candidate at Mersin University.</p>
-      <div class="actions">
-        <a class="btn primary" href="https://scholar.google.com/citations?user=YUCnGLkAAAAJ&hl=tr" target="_blank" rel="noopener">Google Scholar</a>
-        <div class="icon-row">
-          <a class="ic" href="https://www.linkedin.com/in/anil-kus/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.23 0z"/></svg>
-          </a>
-          <a class="ic" href="https://github.com/anilkus" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg>
-          </a>
-          <a class="ic" href="https://orcid.org/0000-0002-5964-3727" target="_blank" rel="noopener" aria-label="ORCID">
-            <svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zM8.1 17.6H6.6V7.2h1.5v10.4zM7.35 6.1a.95.95 0 1 1 0-1.9.95.95 0 0 1 0 1.9zM10.3 7.2h3.9c3.7 0 5.3 2.65 5.3 5.2 0 2.78-2.17 5.2-5.28 5.2H10.3V7.2zm1.5 9.05h2.38c3.4 0 4.18-2.58 4.18-3.85 0-2.07-1.32-3.85-4.2-3.85H11.8v7.7z"/></svg>
-          </a>
+  <aside class="sidebar">
+    <img class="avatar" src="/images/profile_anil.jpeg" alt="Anıl Kuş">
+    <h2 class="sb-name serif">Anıl Kuş</h2>
+    <p class="sb-role">Lecturer &amp; Researcher<br>Yozgat Bozok University, Boğazlıyan Vocational School</p>
+
+    <nav class="sb-nav">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#talks">Talks</a>
+      <a href="#visiting">Visiting Research</a>
+      <a href="#events">Events</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects &amp; Patents</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#honors">Honors &amp; Certificates</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="sb-foot">
+      <a href="mailto:anil.kus@bozok.edu.tr">anil.kus@bozok.edu.tr</a>
+      <a href="https://github.com/anilkus" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://scholar.google.com/citations?user=YUCnGLkAAAAJ&hl=tr" target="_blank" rel="noopener">Google Scholar ↗</a>
+      <a href="https://www.linkedin.com/in/anil-kus/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://avesis.bozok.edu.tr/anil.kus" target="_blank" rel="noopener">AVESIS ↗</a>
+      <a href="/files/CV_AnilKus.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+    </div>
+  </aside>
+
+  <main>
+
+    <section id="about" class="hero">
+      <p class="eyebrow">AI · NLP · Explainable AI</p>
+      <h1>Turning research into reliable, real-world AI systems.</h1>
+      <p class="lede">
+        I'm a Computer Engineer, lecturer, and PhD researcher in Computer Science at Mersin University, currently serving at Yozgat Bozok University. My work focuses on NLP, Explainable AI, Generative AI, and medical AI systems, with published research on text summarization and disinformation detection.
+      </p>
+      <p class="lede">
+        I combine academic research with real-world product development. Alongside co-founding SmartLab Technology Center, I'm actively building AI-driven startup initiatives, turning research into scalable and responsible AI solutions. My international background (Bahçeşehir University Berlin Campus, CISPA Helmholtz Center for Information Security, and Masaryk University) shapes a global, innovation-oriented perspective.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">AI / ML</span>
+        <span class="tag">NLP</span>
+        <span class="tag">Explainable AI</span>
+        <span class="tag">Generative AI</span>
+        <span class="tag">Medical AI</span>
+      </div>
+    </section>
+
+    <section id="research">
+      <p class="eyebrow">Focus Areas</p>
+      <h2 class="sec-title serif">Research Interests</h2>
+      <div class="grid-2">
+        <div class="interest"><span class="num">01</span><span>Natural Language Processing (NLP)</span></div>
+        <div class="interest"><span class="num">02</span><span>Explainable Artificial Intelligence</span></div>
+        <div class="interest"><span class="num">03</span><span>Generative AI</span></div>
+        <div class="interest"><span class="num">04</span><span>Medical &amp; Clinical AI Systems</span></div>
+        <div class="interest"><span class="num">05</span><span>Text Summarization &amp; Disinformation Detection</span></div>
+        <div class="interest"><span class="num">06</span><span>Machine Learning &amp; Deep Learning</span></div>
+      </div>
+    </section>
+
+    <section id="talks">
+      <p class="eyebrow">Presentations</p>
+      <h2 class="sec-title serif">Talks</h2>
+      <div class="tl-item">
+        <div class="tl-date">2026</div>
+        <div>
+          <span class="badge">Selected Flash Talk</span>
+          <p class="tl-title">Can We Trust This Model? Human-Centered Evaluation Metrics for Clinical AI Systems</p>
+          <p class="tl-venue">ELSA Workshop TrustworthyAI4Health: Toward Trustworthy AI Modeling for Computational Healthcare, EMBL, Heidelberg, Germany</p>
+          <p class="tl-desc">A selected flash talk on human-centered evaluation metrics for clinical AI systems, presented at ELSA's workshop on trustworthy AI modeling for computational healthcare.</p>
         </div>
       </div>
-    </div>
-  </div>
-</header>
+      <div class="tl-item">
+        <div class="tl-date">2025</div>
+        <div>
+          <span class="badge">Poster</span>
+          <p class="tl-title">Entity-Level Insights Into Trustworthy Turkish NLP</p>
+          <p class="tl-venue">CISPA-ELLIS Summer School, Trustworthy AI: Secure and Safe Models, Saarbrücken, Germany</p>
+        </div>
+      </div>
+    </section>
 
-<div class="ticker" aria-hidden="true">
-  <div class="track">
-    <span>Natural Language Processing</span><span>Explainable AI</span><span>LLM Evaluation</span><span>Turkish NLP</span><span>Clinical NLP</span><span>Hallucination Detection</span><span>Adversarial ML</span><span>Text Summarization</span>
-    <span>Natural Language Processing</span><span>Explainable AI</span><span>LLM Evaluation</span><span>Turkish NLP</span><span>Clinical NLP</span><span>Hallucination Detection</span><span>Adversarial ML</span><span>Text Summarization</span>
-  </div>
+    <section id="visiting">
+      <p class="eyebrow">Visiting Positions</p>
+      <h2 class="sec-title serif">Visiting Research</h2>
+      <div class="tl-item">
+        <div class="tl-date">Jul – Sep 2026</div>
+        <div>
+          <p class="tl-title">Visiting Researcher</p>
+          <p class="tl-venue">Karlsruhe Institute of Technology (KIT), Germany</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Sep – Oct 2026</div>
+        <div>
+          <p class="tl-title">Visiting Researcher</p>
+          <p class="tl-venue">University of Turku, Finland</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="events">
+      <p class="eyebrow">Training Schools</p>
+      <h2 class="sec-title serif">Events</h2>
+      <div class="tl-item">
+        <div class="tl-date">Sep 2026</div>
+        <div>
+          <span class="badge">COST Action · InsectAI</span>
+          <p class="tl-title">ACCESS 2026 Training School</p>
+          <p class="tl-venue">Kaløvigcenter, Denmark, 14–18 September 2026</p>
+          <p class="tl-desc">Attending under an InsectAI COST Action grant, working on a team project estimating morphological traits (wing, body, leg size) from insect images across an ecological gradient (elevation, latitude). Pipeline: camera-trap images → annotation with Flatbug + Label Studio → the LEPY trait-extraction pipeline.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2025</div>
+        <div>
+          <p class="tl-title">Summer AI Lab</p>
+          <p class="tl-venue">Masaryk University, Brno, Czechia</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2025</div>
+        <div>
+          <p class="tl-title">CISPA-ELLIS Summer School, Trustworthy AI</p>
+          <p class="tl-venue">CISPA Helmholtz Center for Information Security, Saarbrücken, Germany</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <p class="eyebrow">Selected Publications</p>
+      <h2 class="sec-title serif">Publications</h2>
+      <div class="tl-item">
+        <div class="tl-date">2025</div>
+        <div>
+          <p class="tl-title">Detecting Disinformation In Turkish News Using Explainable Artificial Intelligence Approaches</p>
+          <p class="tl-desc">A. Kuş and B. Can</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2024</div>
+        <div>
+          <p class="tl-title">A Hybrid Approach to Automatic Text Summarization of Turkish Texts: Integrating Extractive Methods with LLMs</p>
+          <p class="tl-desc">A. Kuş and Ç. İ. Acı. Innovations in Intelligent Systems and Applications Conference (ASYU), Ankara. doi: 10.1109/ASYU62119.2024.10757122</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2024</div>
+        <div>
+          <p class="tl-title">Can NLP Combined with AI Prevent Language Extinction: A Case Study of Turkish</p>
+          <p class="tl-desc">A. Kuş and Ç. İ. Acı. International Conference on Engineering, Natural Sciences, and Technological Developments (ICENSTED)</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2023</div>
+        <div>
+          <p class="tl-title">Performance Evaluation of the Extractive Methods in Automatic Text Summarization Using Medical Papers</p>
+          <p class="tl-desc">A. Kuş and Ç. İ. Acı. GMBD, vol. 9, no. 4, ICAIAME 2023, pp. 14–22</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2023</div>
+        <div>
+          <p class="tl-title">An Extractive Text Summarization Model for Generating Extended Abstracts of Medical Papers in Turkish</p>
+          <p class="tl-desc">A. Kuş and Ç. İ. Acı. Bilgisayar Bilimleri ve Teknolojileri Dergisi, 4(1), 19–26</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2023</div>
+        <div>
+          <span class="badge">MSc Thesis</span>
+          <p class="tl-title">Automatic summarization of academic studies published in the health field using natural language processing and deep learning methods</p>
+          <p class="tl-desc">Mersin University</p>
+        </div>
+      </div>
+      <p style="margin-top:20px;">
+        <a href="https://scholar.google.com/citations?user=YUCnGLkAAAAJ&hl=tr" target="_blank" rel="noopener" style="border-bottom:1px solid var(--green);color:var(--green);">
+          All publications (Google Scholar) ↗
+        </a>
+      </p>
+    </section>
+
+    <section id="projects">
+      <p class="eyebrow">Applied Work</p>
+      <h2 class="sec-title serif">Projects &amp; Patents</h2>
+      <div class="proj">
+        <span class="proj-name">CA24147: Artificial Intelligence Driven Dental Age Estimation Network (AID-AgE), WG3 &amp; WG5 Member</span>
+        <span class="proj-year">2025 – Ongoing</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">CA22103: A Comprehensive Network Against Brain Cancer (Net4Brain), WG4 Member</span>
+        <span class="proj-year">2023 – Ongoing</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">CA22129: Using Image-based AI for Insect Monitoring &amp; Conservation (InsectAI), WG3 &amp; WG4 Member</span>
+        <span class="proj-year">2023 – Ongoing</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">Control and Evaluation System for Smart Refrigerators, Utility Model (officially registered)</span>
+        <span class="proj-year">2025</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">SmartGate, Smart Security Door System, Utility Model (officially registered)</span>
+        <span class="proj-year">2023</span>
+      </div>
+    </section>
+
+    <section id="experience">
+      <p class="eyebrow">Career</p>
+      <h2 class="sec-title serif">Experience</h2>
+      <div class="tl-item">
+        <div class="tl-date">2025 – Ongoing</div>
+        <div>
+          <p class="tl-title">Lecturer</p>
+          <p class="tl-venue">Yozgat Bozok University, Boğazlıyan Vocational School, Department of Computer Technologies</p>
+          <p class="tl-desc">International Academic Activities Coordinator</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2019 – 2025</div>
+        <div>
+          <p class="tl-title">Lecturer and Researcher</p>
+          <p class="tl-venue">Toros University, Department of Computer Technologies, Mersin</p>
+          <p class="tl-desc">Project Manager and co-founder of SmartLab Technology Center. Head of Computer Technologies Department (2019 to 2021). Assistant Director of the Vocational School (2021 to 2023).</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2021 – 2025</div>
+        <div>
+          <p class="tl-title">Co-founder</p>
+          <p class="tl-venue">SmartLab Technology Center, Toros University, Mersin</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2023 – 2024</div>
+        <div>
+          <p class="tl-title">Mentor</p>
+          <p class="tl-venue">Kaggle, KaggleX BIPOC Mentorship Program (remote)</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2017 – 2019</div>
+        <div>
+          <p class="tl-title">IT Engineer</p>
+          <p class="tl-venue">Private Seyhan Schools, Adana</p>
+          <p class="tl-desc">End-user technical support, troubleshooting software and hardware issues remotely and on-site.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2016 – 2017</div>
+        <div>
+          <p class="tl-title">Software Engineer</p>
+          <p class="tl-venue">Wirelesssistem, Adana</p>
+          <p class="tl-desc">Built web applications from front-end to back-end with HTML/CSS, JavaScript, and PHP.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2016 – 2017</div>
+        <div>
+          <p class="tl-title">English Educator</p>
+          <p class="tl-venue">Public Education Center, Adana</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2013 – 2014</div>
+        <div>
+          <p class="tl-title">Summer Intern Engineer</p>
+          <p class="tl-venue">Gen Yazılım, Istanbul</p>
+          <p class="tl-desc">Worked with mobile application developers and supported both front-end and back-end teams.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <p class="eyebrow">Academic Background</p>
+      <h2 class="sec-title serif">Education</h2>
+      <div class="tl-item">
+        <div class="tl-date">2024 – Ongoing</div>
+        <div>
+          <p class="tl-title">PhD in Computer Engineering</p>
+          <p class="tl-venue">Mersin University, Mersin, Türkiye</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2021 – 2023</div>
+        <div>
+          <p class="tl-title">MSc in Computer Engineering</p>
+          <p class="tl-venue">Mersin University, Mersin, Türkiye</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2012 – 2013</div>
+        <div>
+          <p class="tl-title">Exchange Programme (100% English)</p>
+          <p class="tl-venue">Bahçeşehir University Berlin Campus, Berlin, Germany</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2011 – 2015</div>
+        <div>
+          <p class="tl-title">BSc in Software Engineering (100% English)</p>
+          <p class="tl-venue">Bahçeşehir University, Istanbul, Türkiye</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2011 – 2012</div>
+        <div>
+          <p class="tl-title">English Preparatory School</p>
+          <p class="tl-venue">Bahçeşehir University, Istanbul, Türkiye</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Languages</div>
+        <div>
+          <p class="tl-title">Turkish (native), English (YÖKDİL 85/100)</p>
+          <p class="tl-desc">Spanish (intermediate), German (elementary), Russian (elementary)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="honors">
+      <p class="eyebrow">Recognition</p>
+      <h2 class="sec-title serif">Honors &amp; Certificates</h2>
+      <div class="tl-item">
+        <div class="tl-date">2024</div>
+        <div>
+          <p class="tl-title">Patent and Utility Model Ranking</p>
+          <p class="tl-desc">SmartLab and Toros University ranked 7th for 2023 applications (26 in total), and 5th in the Food thematic area.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2023</div>
+        <div>
+          <p class="tl-title">Teknofest Finalist: Autonomous Harvest Machine</p>
+          <p class="tl-desc">An autonomous machine that collects crops from short trees using image processing.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2022</div>
+        <div>
+          <p class="tl-title">H-INNOVA International Competition, Portugal (Final Project)</p>
+          <p class="tl-desc">Metastasis risk prediction radiomics model in musculoskeletal sarcomas using PET/CT.</p>
+        </div>
+      </div>
+      <div class="proj">
+        <span class="proj-name">CISPA-ELLIS Summer School, Trustworthy AI (Saarbrücken)</span>
+        <span class="proj-year">2025</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">Summer AI Lab, Masaryk University (Brno)</span>
+        <span class="proj-year">2025</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">Graduate Mentoring Programme, Bahçeşehir University</span>
+        <span class="proj-year">2023</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">Python Basics for Data Science, IBM</span>
+        <span class="proj-year">2022</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">Patent Awareness and Information Training, Turkish Patent Movement Platform</span>
+        <span class="proj-year">2022</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">IT Law, BTK Academy</span>
+        <span class="proj-year">2021</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">Introduction to Machine Learning, AI Global Hub</span>
+        <span class="proj-year">2021</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">Advanced Entrepreneurship, KOSGEB</span>
+        <span class="proj-year">2020</span>
+      </div>
+    </section>
+
+    <section id="teaching">
+      <p class="eyebrow">Courses</p>
+      <h2 class="sec-title serif">Teaching</h2>
+      <div class="proj">
+        <span class="proj-name">Mobile Application Programming (MPR 001)</span>
+        <span class="proj-year">2024 – 2026</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">PHP Programming (BPR 709)</span>
+        <span class="proj-year">2024 – 2026</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">Database Management Systems (BPR 122)</span>
+        <span class="proj-year">2024 – 2026</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">Python Programming (BLP 211)</span>
+        <span class="proj-year">2023 – 2024</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">Introduction to Software Technologies (BCT207)</span>
+        <span class="proj-year">2022 – 2024</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">Introduction to Artificial Intelligence (BCT201)</span>
+        <span class="proj-year">2022 – 2024</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">Information Technologies (TGT 126) and Career Planning (KRY 102)</span>
+        <span class="proj-year">2022 – 2024</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">Web Design (SADS 157)</span>
+        <span class="proj-year">2021 – 2024</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">Web Programming I (BLP 106) and II (BLP 225)</span>
+        <span class="proj-year">2019 – 2024</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">Basic Programming and Algorithm I (BCT121) and II (BCT221)</span>
+        <span class="proj-year">2019 – 2021</span>
+      </div>
+      <div class="proj">
+        <span class="proj-name">Social Engineering (BCT125)</span>
+        <span class="proj-year">2019 – 2021</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <p class="eyebrow">Get in Touch</p>
+      <h2 class="sec-title serif">Contact</h2>
+      <div class="contact-box">
+        <p class="sub" style="margin:0;max-width:36ch;color:var(--ink-soft);">Reach out for collaboration, advising, or research opportunities.</p>
+        <div class="contact-links">
+          <a href="mailto:anil.kus@bozok.edu.tr">anil.kus@bozok.edu.tr</a>
+          <a href="https://github.com/anilkus" target="_blank" rel="noopener">github.com/anilkus</a>
+          <a href="https://www.linkedin.com/in/anil-kus/" target="_blank" rel="noopener">linkedin.com/in/anil-kus</a>
+          <a href="https://avesis.bozok.edu.tr/anil.kus" target="_blank" rel="noopener">avesis.bozok.edu.tr/anil.kus</a>
+        </div>
+      </div>
+      <p class="footnote">© <span id="year"></span> Anıl Kuş</p>
+    </section>
+
+  </main>
 </div>
 
-<main class="container">
-
-  <div class="stats reveal">
-    <div class="stat"><b data-count="5">0</b><span>Publications</span></div>
-    <div class="stat"><b data-count="3">0</b><span>EU COST Actions</span></div>
-    <div class="stat"><b data-count="2">0</b><span>Utility models</span></div>
-    <div class="stat"><b data-count="2">0</b><span>Visiting positions</span></div>
-  </div>
-
-  <section class="block reveal" id="about">
-    <h2>About</h2>
-    <p class="lead">I work on making language models measurable, explainable and trustworthy, with a focus on Turkish and clinical text. I head the Computer Technologies Department at Boğazlıyan Vocational School and co-founded SmartLab Technology Center and Zorbalama.</p>
-  </section>
-
-  <section class="block reveal" id="visiting">
-    <h2>Visiting Research</h2>
-    <div class="visits">
-      <div class="card visit">
-        <div class="v-top"><span class="when">Jul to Sep 2026</span></div>
-        <h3>Karlsruhe Institute of Technology</h3>
-        <p class="unit">Institute for Automation and Applied Informatics (IAI)</p>
-        <span class="group">Secure Energy Systems (SES)</span>
-        <p class="focus">Adversarial machine learning and explainable AI for energy systems.</p>
-        <p class="place">Karlsruhe, Germany</p>
-      </div>
-      <div class="card visit">
-        <div class="v-top"><span class="when">Sep to Oct 2026</span><span class="live"><i></i>Current</span></div>
-        <h3>University of Turku</h3>
-        <p class="unit">Department of Computing</p>
-        <span class="group">TurkuNLP</span>
-        <p class="focus">Evaluation of language models and large-scale Turkish web data.</p>
-        <p class="place">Turku, Finland</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="block reveal" id="publications">
-    <h2>Publications</h2>
-    <div class="pubs">
-      <div class="card pub"><span class="year">2024</span><div>
-        <h3><a href="https://doi.org/10.1109/ASYU62119.2024.10757122" target="_blank" rel="noopener">A Hybrid Approach to Automatic Text Summarization of Turkish Texts: Integrating Extractive Methods with LLMs</a></h3>
-        <p>A. Kuş, Ç. İ. Acı. IEEE ASYU 2024</p></div></div>
-      <div class="card pub"><span class="year">2024</span><div>
-        <h3>Can NLP Combined with AI Prevent Language Extinction: A Case Study of Turkish</h3>
-        <p>A. Kuş, Ç. İ. Acı. ICENSTED 2024</p></div></div>
-      <div class="card pub"><span class="year">2023</span><div>
-        <h3>Performance Evaluation of the Extractive Methods in Automatic Text Summarization Using Medical Papers</h3>
-        <p>A. Kuş, Ç. İ. Acı. GMBD 9(4), ICAIAME 2023</p></div></div>
-      <div class="card pub"><span class="year">2023</span><div>
-        <h3>An Extractive Text Summarization Model for Generating Extended Abstracts of Medical Papers in Turkish</h3>
-        <p>A. Kuş, Ç. İ. Acı. Bilgisayar Bilimleri ve Teknolojileri Dergisi</p></div></div>
-      <div class="card pub"><span class="year">Soon</span><div>
-        <h3>Detecting Disinformation in Turkish News Using Explainable AI Approaches</h3>
-        <p>A. Kuş, B. Can</p></div></div>
-    </div>
-    <a class="link" href="https://scholar.google.com/citations?user=YUCnGLkAAAAJ&hl=tr" target="_blank" rel="noopener">See all on Google Scholar</a>
-  </section>
-
-  <section class="block reveal" id="experience">
-    <h2>Experience &amp; Education</h2>
-    <div class="two">
-      <div class="card">
-        <h3 class="t">Experience</h3>
-        <ul class="timeline">
-          <li><small>2025 to present</small><b>Lecturer, Head of Department</b><span>Yozgat Bozok University</span></li>
-          <li><small>2026</small><b>Visiting Researcher</b><span>KIT IAI (SES group) and TurkuNLP, University of Turku</span></li>
-          <li><small>2019 to 2025</small><b>Lecturer, Head of Department, Assistant Director</b><span>Toros University</span></li>
-          <li><small>2017 to 2019</small><b>IT Engineer</b><span>Private Seyhan Schools, Adana</span></li>
-          <li><small>2016 to 2017</small><b>Software Engineer</b><span>Wirelesssistem, Adana. Full-stack web development</span></li>
-          <li><small>2013 to 2014</small><b>Intern Engineer</b><span>Gen Yazılım, Istanbul. Mobile app development</span></li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3 class="t">Education</h3>
-        <ul class="timeline">
-          <li><small>Ongoing</small><b>PhD, Computer Engineering</b><span>Mersin University</span></li>
-          <li><small>2021 to 2023</small><b>MSc, Computer Engineering</b><span>Mersin University</span></li>
-          <li><small>2011 to 2015</small><b>BSc, Software Engineering</b><span>Bahçeşehir University, Istanbul and Berlin</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="block reveal" id="highlights">
-    <h2>Highlights</h2>
-    <div class="grid4">
-      <div class="card hl"><h3 class="t">Talks</h3><ul>
-        <li>Human-Centered Evaluation Metrics for Clinical AI<span>ELSA Workshop, 2026 (selected flash talk)</span></li>
-        <li>Entity-Level Insights Into Trustworthy Turkish NLP<span>CISPA-ELLIS Summer School, 2025 (poster)</span></li>
-      </ul></div>
-      <div class="card hl"><h3 class="t">EU COST Actions</h3><ul>
-        <li>Net4Brain<span>Brain cancer network, WG4</span></li>
-        <li>InsectAI<span>AI for insect monitoring, WG3 and WG4</span></li>
-        <li>AID-AgE<span>AI for dental age estimation, WG3 and WG5</span></li>
-      </ul></div>
-      <div class="card hl"><h3 class="t">Summer Schools</h3><ul>
-        <li>ACCESS 2026 Training School<span>Denmark, 2026</span></li>
-        <li>CISPA-ELLIS Summer School on Trustworthy AI<span>Saarbrücken, 2025</span></li>
-        <li>Summer AI Lab<span>Masaryk University, Brno, 2025</span></li>
-      </ul></div>
-      <div class="card hl"><h3 class="t">Utility Models</h3><ul>
-        <li>Smart Refrigerator Control and Evaluation System<span>Registered, 2025</span></li>
-        <li>SmartGate Security Door System<span>Registered, 2023</span></li>
-      </ul></div>
-    </div>
-  </section>
-
-  <section class="contact reveal" id="contact">
-    <div class="blob b1"></div><div class="blob b2"></div>
-    <div class="inner">
-      <div>
-        <h2>Get in touch</h2>
-        <p>Open to research collaborations and joint projects.</p>
-      </div>
-      <div class="links">
-        <a class="btn linkedin" href="https://www.linkedin.com/in/anil-kus/" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.23 0z"/></svg>
-          LinkedIn
-        </a>
-        <a class="btn ghost" href="mailto:anil.kus@bozok.edu.tr">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2 .9v.3l8 5.3 8-5.3v-.3H4zm16 2.7-7.45 4.93a1 1 0 0 1-1.1 0L4 9.1V18h16V9.1z"/></svg>
-          anil.kus@bozok.edu.tr
-        </a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer>© <span id="year">2026</span> Anıl Kuş</footer>
-
 <script>
-document.getElementById('year').textContent=new Date().getFullYear();
-var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-var nav=document.getElementById('nav');
-function onScroll(){nav.classList.toggle('scrolled',window.scrollY>40)}
-window.addEventListener('scroll',onScroll,{passive:true});onScroll();
-
-(function(){
-  var words=['NLP Researcher','Lecturer','Explainable AI','LLM Evaluation','PhD Candidate'];
-  var el=document.getElementById('typed');
-  if(reduce)return;
-  var w=0,i=words[0].length,del=true;
-  function tick(){
-    var word=words[w];
-    el.textContent=word.slice(0,i);
-    if(del){ if(i>0){i--;setTimeout(tick,45);} else {del=false;w=(w+1)%words.length;setTimeout(tick,250);} }
-    else { if(i<words[w].length){i++;setTimeout(tick,85);} else {del=true;setTimeout(tick,1800);} }
-  }
-  setTimeout(tick,1800);
-})();
-
-function countUp(el){
-  var target=+el.dataset.count,start=null;
-  if(reduce){el.textContent=target;return;}
-  function step(t){
-    if(!start)start=t;
-    var p=Math.min((t-start)/1200,1);
-    el.textContent=Math.round(target*(1-Math.pow(1-p,3)));
-    if(p<1)requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-}
-
-var io=new IntersectionObserver(function(entries){
-  entries.forEach(function(e){
-    if(!e.isIntersecting)return;
-    e.target.classList.add('in');
-    e.target.querySelectorAll('[data-count]').forEach(countUp);
-    io.unobserve(e.target);
+  var sections = document.querySelectorAll('main section[id]');
+  var links = document.querySelectorAll('.sb-nav a');
+  window.addEventListener('scroll', function(){
+    var pos = window.scrollY + 120;
+    sections.forEach(function(sec){
+      var link = document.querySelector('.sb-nav a[href="#' + sec.id + '"]');
+      if(!link) return;
+      if(pos >= sec.offsetTop && pos < sec.offsetTop + sec.offsetHeight){
+        links.forEach(function(l){ l.classList.remove('active'); });
+        link.classList.add('active');
+      }
+    });
   });
-},{threshold:.15});
-document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 </script>
 </body>
 </html>
